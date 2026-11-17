@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Kaushalji • NIELIT CCC Masterclass & Exam Portal</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2563eb">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
+
+<!-- 2-SECOND KAUSHALJI SPLASH SCREEN ANIMATION -->
+<div id="splashScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 overflow-hidden">
+  <div class="splash-glow"></div>
+  <div class="relative z-10 text-center px-4">
+    <div class="splash-badge inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/20 border border-blue-500/40 text-blue-300 text-xs font-bold tracking-widest uppercase mb-4">
+      <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> NIELIT CCC MASTERCLASS
+    </div>
+    <h1 class="splash-title text-5xl sm:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-blue-400 to-emerald-400">
+      Kaushalji
+    </h1>
+    <p class="splash-sub text-slate-400 text-xs sm:text-sm font-semibold tracking-widest uppercase mt-3">
+      Digital Education & CBT Exam Portal
+    </p>
+    <div class="w-56 sm:w-72 h-1.5 bg-slate-800 rounded-full mx-auto mt-6 overflow-hidden">
+      <div class="splash-bar h-full bg-gradient-to-r from-blue-500 via-amber-400 to-emerald-400 rounded-full"></div>
+    </div>
+  </div>
+</div>
+
+<!-- AUTH SECTION (Hidden until 2s splash completes) -->
+<div id="authView" class="hidden min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
+  <div class="w-full max-w-5xl grid md:grid-cols-12 bg-slate-900/90 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-xl animate-fadeIn">
+    <!-- Left Branding -->
+    <div class="md:col-span-5 bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-8 flex flex-col justify-between text-white">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wider uppercase mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Kaushalji CCC Portal
+        </div>
+        <h2 class="text-3xl font-extrabold leading-tight mb-3">CCC Masterclass & CBT Exam Simulator</h2>
+        <p class="text-blue-100 text-sm leading-relaxed">All 9 Chapters Bilingual Notes (Hindi + English), Shortcuts Vault, and 25 / 50 / 75 / 100 Random Question CBT Tests.</p>
+      </div>
+      <div class="space-y-3 my-8 text-xs">
+        <div class="flex items-center gap-3 bg-white/10 p-3 rounded-xl">
+          <span class="text-lg">🔐</span>
+          <div><div class="font-bold">100% LocalStorage Auth</div><div class="text-blue-200">Offline photo compression & progress sync</div></div>
+        </div>
+        <div class="flex items-center gap-3 bg-white/10 p-3 rounded-xl">
+          <span class="text-lg">🖥️</span>
+          <div><div class="font-bold">Random CBT Practice Sets</div><div class="text-blue-200">Choose 25, 50, 75, or 100 random questions</div></div>
+        </div>
+      </div>
+      <button onclick="loginDemoUser()" class="w-full py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-sm transition shadow-lg">
+        ⚡ 1-Click Demo Student Login
+      </button>
+    </div>
+
+    <!-- Right Forms -->
+    <div class="md:col-span-7 p-6 sm:p-10">
+      <div class="flex gap-2 p-1 bg-slate-800/80 rounded-xl mb-6">
+        <button id="tabLoginBtn" onclick="switchAuthTab('login')" class="flex-1 py-2.5 rounded-lg text-sm font-bold bg-blue-600 text-white transition">Student Login</button>
+        <button id="tabRegBtn" onclick="switchAuthTab('register')" class="flex-1 py-2.5 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition">New Registration</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1.5">Username</label>
+          <input type="text" id="loginUser" required placeholder="Enter registered username" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1.5">Password</label>
+          <input type="password" id="loginPass" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1.5">Security Captcha</label>
+          <div class="flex items-center gap-2">
+            <canvas id="loginCaptchaCanvas" width="150" height="44" class="rounded-xl border border-slate-700 bg-slate-800"></canvas>
+            <button type="button" onclick="generateCaptcha('login')" title="Refresh Captcha" class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm">🔄</button>
+            <button type="button" onclick="speakCaptcha('login')" title="Audio Captcha" class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm">🔊</button>
+          </div>
+          <input type="text" id="loginCaptchaInput" required placeholder="Enter captcha code above" class="mt-2 w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+        </div>
+        <p id="loginErr" class="text-rose-400 text-xs font-semibold hidden"></p>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-sm shadow-lg shadow-blue-600/30 transition">
+          Login to Portal →
+        </button>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="regForm" onsubmit="handleRegister(event)" class="space-y-3.5 hidden">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Full Name</label>
+            <input type="text" id="regName" required placeholder="e.g. Amit Sharma" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Username</label>
+            <input type="text" id="regUser" oninput="checkUsernameLive()" required placeholder="e.g. amit_ccc" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+            <span id="userAvailMsg" class="text-[11px] font-medium"></span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Password</label>
+          <input type="password" id="regPass" required placeholder="Create password (min 4 chars)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+        </div>
+
+        <!-- Photo Upload + Avatars -->
+        <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/80">
+          <div class="flex items-center gap-3">
+            <img id="regPreviewImg" src="" alt="Avatar" class="w-14 h-14 rounded-full object-cover border-2 border-blue-500 bg-slate-900">
+            <div class="flex-1">
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Profile Photo (Auto-Compressed) or Select Avatar</label>
+              <input type="file" id="regPhotoInput" accept="image/*" onchange="handlePhotoUpload(event)" class="text-xs text-slate-400 file:mr-2 file:py-1 file:px-3 file:rounded-lg file:border-0 file:bg-blue-600 file:text-white file:font-semibold hover:file:bg-blue-500">
+              <div class="flex gap-2 mt-2" id="avatarSelector"></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Security Captcha</label>
+          <div class="flex items-center gap-2">
+            <canvas id="regCaptchaCanvas" width="150" height="42" class="rounded-xl border border-slate-700 bg-slate-800"></canvas>
+            <button type="button" onclick="generateCaptcha('reg')" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm">🔄</button>
+            <button type="button" onclick="speakCaptcha('reg')" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-sm">🔊</button>
+            <input type="text" id="regCaptchaInput" required placeholder="Captcha" class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
+          </div>
+        </div>
+
+        <p id="regErr" class="text-rose-400 text-xs font-semibold hidden"></p>
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/20 transition">
+          Create Account & Start Learning ✓
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN APP SHELL -->
+<div id="appView" class="hidden min-h-screen flex flex-col">
+  <!-- Top Header -->
+  <header class="sticky top-0 z-30 bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      <div onclick="switchPage('home')" class="cursor-pointer flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-amber-500 flex items-center justify-center font-black text-lg shadow-md">K</div>
+        <div>
+          <div class="font-extrabold text-sm sm:text-base tracking-tight">Kaushalji • CCC Portal</div>
+          <div class="text-[11px] text-slate-400 hidden sm:block">NIELIT Course on Computer Concepts</div>
+        </div>
+      </div>
+
+      <!-- Quick Nav -->
+      <nav class="hidden md:flex items-center gap-1.5 bg-slate-800/80 p-1 rounded-xl">
+        <button onclick="switchPage('home')" id="nav-home" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white">Home</button>
+        <button onclick="switchPage('theory')" id="nav-theory" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-300 hover:text-white">Theory (9 Ch)</button>
+        <button onclick="switchPage('shortcuts')" id="nav-shortcuts" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-300 hover:text-white">Shortcuts</button>
+        <button onclick="switchPage('quiz')" id="nav-quiz" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-300 hover:text-white">MCQs Exam</button>
+      </nav>
+
+      <!-- User Profile Pill -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleLang()" id="langToggleBtn" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-amber-400">
+          हिं / EN
+        </button>
+        <div class="flex items-center gap-2 bg-slate-800/70 pr-2.5 pl-1 py-1 rounded-full border border-slate-700">
+          <img id="headerAvatar" src="" class="w-7 h-7 rounded-full object-cover border border-blue-400">
+          <span id="headerUsername" class="text-xs font-bold hidden sm:inline">Student</span>
+        </div>
+        <button onclick="logoutUser()" title="Logout" class="px-2.5 py-1.5 rounded-lg bg-rose-600/20 hover:bg-rose-600 text-rose-400 hover:text-white text-xs font-bold transition">
+          Exit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TWO PRIMARY DIVS DIRECTLY BELOW HEADER (THEORY DIV & MCQS DIV) -->
+  <div class="bg-slate-900/60 border-b border-slate-800/80 px-4 py-5">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- DIV 1: THEORY -->
+      <div id="mainDivTheory" onclick="switchPage('theory')" class="cursor-pointer group relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br from-blue-600/20 via-indigo-900/30 to-slate-900 border-2 border-blue-500/40 hover:border-blue-400 transition-all shadow-lg">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">📚</div>
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 text-[11px] font-bold uppercase tracking-wider">Study Module</span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-1">Theory & Notes (थ्योरी)</h2>
+              <p class="text-xs text-slate-300 mt-0.5">All 9 NIELIT Chapters + Shortcuts & Voice Audio</p>
+            </div>
+          </div>
+          <span class="text-blue-400 text-2xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+        </div>
+      </div>
+
+      <!-- DIV 2: MCQS -->
+      <div id="mainDivMcqs" onclick="openMcqCountSelector()" class="cursor-pointer group relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br from-emerald-600/20 via-teal-900/30 to-slate-900 border-2 border-emerald-500/40 hover:border-emerald-400 transition-all shadow-lg">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-600 flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">🖥️</div>
+            <div>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold uppercase tracking-wider">CBT Practice</span>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-1">MCQs Exam (प्रैक्टिस क्विज़)</h2>
+              <p class="text-xs text-slate-300 mt-0.5">Click to choose 25, 50, 75, or 100 Random Questions</p>
+            </div>
+          </div>
+          <span class="text-emerald-400 text-2xl font-bold group-hover:translate-x-1 transition-transform">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6">
+
+    <!-- 1. HOME / DASHBOARD PAGE -->
+    <section id="page-home" class="space-y-6">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <img id="dashAvatar" src="" class="w-14 h-14 rounded-2xl object-cover border-2 border-blue-400 shadow">
+          <div>
+            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider">Candidate Profile</div>
+            <h3 id="dashName" class="text-xl font-extrabold">Student Name</h3>
+            <p id="dashMeta" class="text-xs text-slate-400">@username • XP: 0</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="switchPage('shortcuts')" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-amber-300">⌨️ Shortcuts & Full Forms</button>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <div class="text-xs text-slate-400 font-semibold">Syllabus Completed</div>
+          <div id="kpiSyllabus" class="text-2xl font-extrabold text-blue-400 mt-1">0 / 9 Ch</div>
+          <div class="w-full bg-slate-800 h-1.5 rounded-full mt-3 overflow-hidden"><div id="barSyllabus" class="bg-blue-500 h-full transition-all" style="width:0%"></div></div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <div class="text-xs text-slate-400 font-semibold">Best NIELIT Grade</div>
+          <div id="kpiGrade" class="text-2xl font-extrabold text-emerald-400 mt-1">--</div>
+          <div class="text-[11px] text-slate-500 mt-2">Pass Criteria: ≥ 50% (Grade D)</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <div class="text-xs text-slate-400 font-semibold">Tests Attempted</div>
+          <div id="kpiTests" class="text-2xl font-extrabold text-amber-400 mt-1">0</div>
+          <div id="kpiAvgScore" class="text-[11px] text-slate-500 mt-2">Avg Accuracy: 0%</div>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <div class="text-xs text-slate-400 font-semibold">Exam Readiness</div>
+          <div id="kpiReady" class="text-2xl font-extrabold text-purple-400 mt-1">0%</div>
+          <div class="text-[11px] text-slate-500 mt-2">Based on Theory + Quiz XP</div>
+        </div>
+      </div>
+
+      <!-- Recent Quiz History -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+        <h3 class="font-bold text-base mb-3">📊 Recent CBT Exam & Quiz History</h3>
+        <div id="historyContainer" class="text-sm text-slate-400">No exams attempted yet. Click on the MCQs Exam div above to start!</div>
+      </div>
+    </section>
+
+    <!-- 2. THEORY HUB PAGE -->
+    <section id="page-theory" class="hidden space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-extrabold">📚 NIELIT CCC 9-Chapter Theory Hub</h2>
+          <p class="text-xs text-slate-400">Bilingual Exam-Oriented Study Material with Voice Narration</p>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="switchPage('shortcuts')" class="px-3.5 py-2 rounded-xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold">⌨️ Shortcuts Vault</button>
+          <input type="text" id="theorySearch" oninput="renderTheory()" placeholder="🔍 Search topic..." class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-sm focus:border-blue-500 focus:outline-none w-full sm:w-64">
+        </div>
+      </div>
+      <div id="theoryGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </section>
+
+    <!-- 3. SHORTCUTS & FULL FORMS PAGE -->
+    <section id="page-shortcuts" class="hidden space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl font-extrabold">⌨️ Shortcuts & Full Forms Vault</h2>
+          <p class="text-xs text-slate-400">Click any flashcard to flip & test your memory!</p>
+        </div>
+        <select id="shortcutFilter" onchange="renderShortcuts()" class="px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold">
+          <option value="ALL">All Categories</option>
+          <option value="Writer">LibreOffice Writer</option>
+          <option value="Calc">LibreOffice Calc</option>
+          <option value="Impress">LibreOffice Impress</option>
+          <option value="OS">Windows / OS</option>
+          <option value="Full Form">Full Forms</option>
+        </select>
+      </div>
+      <div id="shortcutsGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5"></div>
+    </section>
+
+    <!-- 4. CBT QUIZ & MOCK TEST PAGE (25 / 50 / 75 / 100 BUTTONS) -->
+    <section id="page-quiz" class="hidden space-y-5">
+      <!-- Question Count Selector (25, 50, 75, 100) -->
+      <div id="quizLobby" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+        <div class="text-center max-w-xl mx-auto">
+          <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-extrabold uppercase tracking-wider">Random CBT Question Generator</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mt-2">Select Number of MCQs</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">Har test mein bilkul naye random questions generate honge. Passing marks: 50% (No Negative Marking).</p>
+        </div>
+
+        <!-- 4 BIG BUTTONS: 25, 50, 75, 100 -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <button onclick="startRandomCBT(25)" class="group p-6 rounded-2xl bg-gradient-to-b from-blue-600/25 to-slate-800/80 border-2 border-blue-500/50 hover:border-blue-400 hover:-translate-y-1 transition-all text-center shadow-lg">
+            <div class="text-4xl sm:text-5xl font-black text-blue-400 group-hover:scale-110 transition-transform">25</div>
+            <div class="text-sm font-bold text-white mt-2">Questions</div>
+            <div class="text-[11px] text-slate-400 mt-1">Quick Practice • 20 Mins</div>
+          </button>
+
+          <button onclick="startRandomCBT(50)" class="group p-6 rounded-2xl bg-gradient-to-b from-emerald-600/25 to-slate-800/80 border-2 border-emerald-500/50 hover:border-emerald-400 hover:-translate-y-1 transition-all text-center shadow-lg">
+            <div class="text-4xl sm:text-5xl font-black text-emerald-400 group-hover:scale-110 transition-transform">50</div>
+            <div class="text-sm font-bold text-white mt-2">Questions</div>
+            <div class="text-[11px] text-slate-400 mt-1">Half Mock • 45 Mins</div>
+          </button>
+
+          <button onclick="startRandomCBT(75)" class="group p-6 rounded-2xl bg-gradient-to-b from-amber-600/25 to-slate-800/80 border-2 border-amber-500/50 hover:border-amber-400 hover:-translate-y-1 transition-all text-center shadow-lg">
+            <div class="text-4xl sm:text-5xl font-black text-amber-400 group-hover:scale-110 transition-transform">75</div>
+            <div class="text-sm font-bold text-white mt-2">Questions</div>
+            <div class="text-[11px] text-slate-400 mt-1">Pro Mock • 65 Mins</div>
+          </button>
+
+          <button onclick="startRandomCBT(100)" class="group p-6 rounded-2xl bg-gradient-to-b from-purple-600/25 to-slate-800/80 border-2 border-purple-500/50 hover:border-purple-400 hover:-translate-y-1 transition-all text-center shadow-lg">
+            <div class="text-4xl sm:text-5xl font-black text-purple-400 group-hover:scale-110 transition-transform">100</div>
+            <div class="text-sm font-bold text-white mt-2">Questions</div>
+            <div class="text-[11px] text-slate-400 mt-1">Full NIELIT Exam • 90 Mins</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Active CBT Exam Arena -->
+      <div id="quizArena" class="hidden grid lg:grid-cols-12 gap-5">
+        <div class="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <span id="qBadge" class="px-3 py-1 rounded-lg bg-blue-600/20 text-blue-400 text-xs font-bold">Question 1 of 25</span>
+              <div class="flex items-center gap-2 text-sm font-extrabold text-amber-400">
+                <span>⏱️</span> <span id="examTimer">20:00</span>
+              </div>
+            </div>
+            <h3 id="qText" class="text-base sm:text-lg font-bold leading-relaxed mb-5">Question text loads here...</h3>
+            <div id="qOptions" class="space-y-3"></div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 border-t border-slate-800 pt-4 mt-6">
+            <div class="flex gap-2">
+              <button onclick="prevQuestion()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-bold">← Prev</button>
+              <button onclick="toggleMarkReview()" class="px-4 py-2 rounded-xl bg-purple-600/20 hover:bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-bold">🚩 Mark Review</button>
+              <button onclick="clearResponse()" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-slate-400">Clear</button>
+            </div>
+            <div class="flex gap-2">
+              <button onclick="nextQuestion()" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-xs font-bold">Save & Next →</button>
+              <button onclick="submitCBTExam()" class="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-xs font-bold">Submit Exam</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Palette Sidebar -->
+        <div class="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+          <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+            <img id="cbtUserImg" src="" class="w-11 h-11 rounded-full object-cover border border-blue-500">
+            <div>
+              <div id="cbtUserName" class="text-sm font-bold">Candidate</div>
+              <div class="text-[11px] text-slate-400">Kaushalji NIELIT CBT Session</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-emerald-500 inline-block"></span> Answered</div>
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-slate-700 inline-block"></span> Not Answered</div>
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-purple-600 inline-block"></span> Marked Review</div>
+            <div class="flex items-center gap-1.5"><span class="w-3 h-3 rounded border-2 border-blue-400 inline-block"></span> Current</div>
+          </div>
+          <div id="questionPalette" class="grid grid-cols-5 gap-2 pt-2 max-h-72 overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+
+      <!-- Result & Certificate View -->
+      <div id="quizResult" class="hidden space-y-5">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center space-y-4">
+          <div id="resBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-extrabold uppercase">RESULT</div>
+          <h2 id="resTitle" class="text-2xl sm:text-3xl font-extrabold">Congratulations!</h2>
+          <p class="text-xs text-slate-400">Issued by Kaushalji NIELIT CCC Masterclass Portal</p>
+          <div class="grid grid-cols-3 max-w-md mx-auto gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-slate-800"><div class="text-xs text-slate-400">Score</div><div id="resScore" class="text-xl font-extrabold text-blue-400">0/25</div></div>
+            <div class="p-3 rounded-xl bg-slate-800"><div class="text-xs text-slate-400">Percentage</div><div id="resPercent" class="text-xl font-extrabold text-amber-400">0%</div></div>
+            <div class="p-3 rounded-xl bg-slate-800"><div class="text-xs text-slate-400">NIELIT Grade</div><div id="resGrade" class="text-xl font-extrabold text-emerald-400">S</div></div>
+          </div>
+          <div class="flex justify-center gap-3 pt-3">
+            <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs">🖨️ Print Certificate</button>
+            <button onclick="openMcqCountSelector()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 font-bold text-xs">Take Another Test</button>
+          </div>
+        </div>
+
+        <!-- Answer Key Review -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+          <h3 class="font-bold text-base mb-4">📝 Detailed Answer Key & Explanations</h3>
+          <div id="reviewList" class="space-y-3"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- CHAPTER MODAL -->
+<div id="chapterModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+    <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+      <div>
+        <span id="modalChCode" class="text-xs font-bold text-blue-400">CH-01</span>
+        <h3 id="modalChTitle" class="text-lg font-extrabold">Chapter Title</h3>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="speakChapter()" class="px-3 py-1.5 rounded-lg bg-blue-600/20 text-blue-400 text-xs font-bold">🔊 Listen</button>
+        <button onclick="closeChapterModal()" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs">✕</button>
+      </div>
+    </div>
+    <div id="modalChBody" class="p-5 overflow-y-auto space-y-4 text-sm leading-relaxed"></div>
+    <div class="p-4 border-t border-slate-800 flex items-center justify-between bg-slate-950/60">
+      <button id="markReadBtn" onclick="toggleChapterRead()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-xs font-bold">✓ Mark as Completed (+50 XP)</button>
+      <button onclick="closeChapterModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-xs font-bold">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

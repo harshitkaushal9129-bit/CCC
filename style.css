@@ -1,0 +1,146 @@
+body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', sans-serif;
+}
+
+/* 2-Second Kaushalji Splash Animations */
+.splash-glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.45) 0%, rgba(245, 158, 11, 0.15) 45%, transparent 70%);
+  filter: blur(30px);
+  animation: pulseGlow 2s ease-in-out forwards;
+}
+
+.splash-badge {
+  opacity: 0;
+  animation: slideDownFade 0.6s ease-out 0.1s forwards;
+}
+
+.splash-title {
+  opacity: 0;
+  transform: scale(0.75);
+  letter-spacing: 0.18em;
+  animation: kaushaljiZoomReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.splash-sub {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out 0.65s forwards;
+}
+
+.splash-bar {
+  width: 0%;
+  animation: progressFill 1.85s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+}
+
+.splash-exit {
+  animation: splashFadeOut 0.35s ease-in forwards;
+}
+
+@keyframes kaushaljiZoomReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.72) translateY(12px);
+    letter-spacing: 0.25em;
+    filter: blur(8px);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1.04) translateY(0);
+    letter-spacing: 0.02em;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    letter-spacing: -0.02em;
+  }
+}
+
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes progressFill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(0.6); opacity: 0.2; }
+  50% { transform: scale(1.15); opacity: 0.95; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes splashFadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.45s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+/* 3D Flashcard Flip Animation */
+.flashcard {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 130px;
+}
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+/* Print Styles */
+@media print {
+  body { background: #ffffff !important; color: #000000 !important; }
+  header, #mainDivTheory, #mainDivMcqs, #quizLobby, #quizArena, #reviewList { display: none !important; }
+  #quizResult { display: block !important; border: 4px double #1e3a8a !important; padding: 2rem !important; }
+}

@@ -1,0 +1,359 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "code": "CH-01",
+      "title_en": "Introduction to Computer",
+      "title_hi": "कंप्यूटर का परिचय (Introduction to Computer)",
+      "summary_hi": "Computer ek electronic device hai jo raw data ko input lekar process karta hai aur meaningful output deta hai. Father of Computer: Charles Babbage.",
+      "summary_en": "A computer is an electronic device that accepts raw data as input, processes it according to instructions, and produces meaningful output.",
+      "points": [
+        {
+          "h": "5 Generations of Computer",
+          "b_hi": "1st: Vacuum Tubes (ENIAC) | 2nd: Transistors | 3rd: Integrated Circuits (IC - Jack Kilby) | 4th: Microprocessor (Intel 4004) | 5th: AI & ULSI",
+          "b_en": "1st: Vacuum Tubes | 2nd: Transistors | 3rd: Integrated Circuits (IC) | 4th: Microprocessor | 5th: AI & ULSI"
+        },
+        {
+          "h": "Memory Hierarchy",
+          "b_hi": "Register > Cache > RAM (Volatile) > ROM (Non-Volatile) > SSD/HDD. 1 Byte = 8 Bits, 1 Nibble = 4 Bits, 1 KB = 1024 Bytes.",
+          "b_en": "Register > Cache > RAM (Volatile) > ROM (Non-Volatile) > Secondary Storage. 1 Byte = 8 Bits, 1 Nibble = 4 Bits."
+        },
+        {
+          "h": "Input & Output Devices",
+          "b_hi": "Input: Keyboard, Mouse, OCR, OMR, MICR, Barcode Reader, Joystick. Output: Monitor, Printer (Impact: Dot Matrix; Non-Impact: Laser, Inkjet), Plotter.",
+          "b_en": "Input: Keyboard, Mouse, OCR, OMR, MICR, Scanner. Output: Monitor, Laser/Inkjet Printer, Plotter."
+        }
+      ],
+      "trap_hi": "Exam Trap: Plotter ek Output device hai (CAD/Engineering drawings ke liye), Scanner nahi!",
+      "trap_en": "Exam Trap: Plotter is an Output device used for vector graphics, not an Input device."
+    },
+    {
+      "id": 2,
+      "code": "CH-02",
+      "title_en": "Introduction to Operating System",
+      "title_hi": "ऑपरेटिंग सिस्टम (Windows & Ubuntu Linux)",
+      "summary_hi": "Operating System user aur hardware ke beech interface ka kaam karta hai. Examples: Windows, Linux (Ubuntu), macOS, Android.",
+      "summary_en": "An Operating System acts as an intermediary between computer hardware and the user.",
+      "points": [
+        {
+          "h": "Linux & Ubuntu Basics",
+          "b_hi": "Linux ek Open-Source OS hai (Linus Torvalds, 1991). Ubuntu Linux ka popular distro hai. Root user superuser hota hai.",
+          "b_en": "Linux is an open-source kernel created by Linus Torvalds in 1991. Ubuntu is a popular Debian-based distribution."
+        },
+        {
+          "h": "Important Linux Commands",
+          "b_hi": "ls (list files), pwd (print working directory), mkdir (create folder), rm (remove file), chmod (change file permissions), cp (copy).",
+          "b_en": "ls (list directory), pwd (current path), mkdir (make directory), rm (delete), chmod (permissions), mv (move/rename)."
+        },
+        {
+          "h": "Windows & File Management",
+          "b_hi": "Shift + Delete se file Recycle Bin mein gaye bina permanently delete hoti hai. Task Manager shortcut: Ctrl + Shift + Esc.",
+          "b_en": "Shift + Delete permanently deletes files bypassing Recycle Bin. Ctrl + Shift + Esc opens Task Manager."
+        }
+      ],
+      "trap_hi": "Exam Trap: Ubuntu mein default web browser Firefox hota hai aur default office suite LibreOffice hota hai.",
+      "trap_en": "Exam Trap: Firefox is the default browser and LibreOffice is the default office suite in Ubuntu."
+    },
+    {
+      "id": 3,
+      "code": "CH-03",
+      "title_en": "Word Processing (LibreOffice Writer)",
+      "title_hi": "वर्ड प्रोसेसिंग (LibreOffice Writer)",
+      "summary_hi": "NIELIT CCC syllabus mein MS Word ki jagah LibreOffice Writer se sawal aate hain. Default file extension: .odt",
+      "summary_en": "LibreOffice Writer is the open-source word processor tested in NIELIT CCC. Default extension: .odt.",
+      "points": [
+        {
+          "h": "Zoom & Font Limits",
+          "b_hi": "Writer mein Minimum Zoom 20% aur Maximum Zoom 600% hota hai. Default Font: Liberation Serif (12 pt).",
+          "b_en": "Minimum Zoom in Writer is 20% and Maximum Zoom is 600%. Default font is Liberation Serif (12 pt)."
+        },
+        {
+          "h": "Critical Writer Shortcuts",
+          "b_hi": "Ctrl+H (Find & Replace), Ctrl+Shift+P (Superscript), Ctrl+Shift+B (Subscript), F7 (Spelling), Ctrl+F12 (Insert Table), Ctrl+Enter (Page Break).",
+          "b_en": "Ctrl+H (Find & Replace), Ctrl+Shift+P (Superscript), Ctrl+Shift+B (Subscript), F7 (Spellcheck), Ctrl+F12 (Insert Table)."
+        },
+        {
+          "h": "Mail Merge & Export",
+          "b_hi": "Mail Merge wizard Tools menu mein hota hai. Direct Export as PDF option File menu mein milta hai.",
+          "b_en": "Mail Merge wizard is found under the Tools menu. Direct Export as PDF is under the File menu."
+        }
+      ],
+      "trap_hi": "Exam Trap: MS Word mein Superscript Ctrl+Shift++ hota hai, lekin LibreOffice Writer mein Ctrl+Shift+P hota hai!",
+      "trap_en": "Exam Trap: Superscript in LibreOffice Writer is Ctrl+Shift+P (not Ctrl+Shift++)."
+    },
+    {
+      "id": 4,
+      "code": "CH-04",
+      "title_en": "Spreadsheet (LibreOffice Calc)",
+      "title_hi": "स्प्रेडशीट (LibreOffice Calc)",
+      "summary_hi": "Data analysis, formulas aur charts ke liye LibreOffice Calc use hota hai. Default file extension: .ods",
+      "summary_en": "LibreOffice Calc is used for numerical data, formulas, and charts. Default extension: .ods.",
+      "points": [
+        {
+          "h": "Rows, Columns & Zoom",
+          "b_hi": "Total Rows: 1,048,576 | Total Columns: 1,024 (Last column: AMJ) | Zoom: Min 20%, Max 400%.",
+          "b_en": "Total Rows: 1,048,576 | Total Columns: 1,024 (Last column: AMJ) | Zoom: Min 20%, Max 400%."
+        },
+        {
+          "h": "Important Calc Formulas",
+          "b_hi": "Har formula '=' se start hota hai. =SUM(A1:A5), =AVERAGE(), =COUNT(), =MAX(), =MIN(), =ROUND(123.456, 2) -> 123.46, =MOD(10,3) -> 1.",
+          "b_en": "Formulas start with '='. =ROUND(123.456, 2) returns 123.46; =MOD(10,3) returns 1; =QUOTIENT(10,3) returns 3."
+        },
+        {
+          "h": "Calc Shortcuts",
+          "b_hi": "Ctrl+; (Current Date), Ctrl+Shift+; (Current Time), F2 (Edit Cell), Ctrl+1 (Format Cells), Ctrl+` (Show Formulas).",
+          "b_en": "Ctrl+; (Insert Date), Ctrl+Shift+; (Insert Time), F2 (Edit Cell), Ctrl+1 (Format Cells)."
+        }
+      ],
+      "trap_hi": "Exam Trap: Calc mein cell ke andar new line dalne ke liye Ctrl + Enter dabate hain (Excel mein Alt+Enter hota hai).",
+      "trap_en": "Exam Trap: Use Ctrl + Enter to insert a line break inside a Calc cell."
+    },
+    {
+      "id": 5,
+      "code": "CH-05",
+      "title_en": "Presentation (LibreOffice Impress)",
+      "title_hi": "प्रेजेंटेशन (LibreOffice Impress)",
+      "summary_hi": "Slideshow aur visual presentations banane ke liye LibreOffice Impress use hota hai. Default extension: .odp",
+      "summary_en": "LibreOffice Impress is used to create slide presentations. Default extension: .odp.",
+      "points": [
+        {
+          "h": "Zoom & Views",
+          "b_hi": "Impress mein Minimum Zoom 5% aur Maximum Zoom 3000% hota hai. Views: Normal, Outline, Notes, Slide Sorter, Master Slide.",
+          "b_en": "Minimum Zoom in Impress is 5% and Maximum Zoom is 3000%. Views include Normal, Outline, Notes, and Slide Sorter."
+        },
+        {
+          "h": "Impress Shortcuts",
+          "b_hi": "F5 (Start Slide Show from 1st slide), Shift+F5 (Start from Current Slide), Ctrl+M (Insert New Slide), Esc (End Slide Show).",
+          "b_en": "F5 (Start Slide Show), Shift+F5 (From Current Slide), Ctrl+M (New Slide), Esc (Exit Slide Show)."
+        }
+      ],
+      "trap_hi": "Exam Trap: Impress mein New Slide insert karne ka shortcut Ctrl + M hota hai (Ctrl + N se naya presentation khulta hai).",
+      "trap_en": "Exam Trap: Ctrl + M inserts a new slide, whereas Ctrl + N creates a new presentation."
+    },
+    {
+      "id": 6,
+      "code": "CH-06",
+      "title_en": "Introduction to Internet & WWW",
+      "title_hi": "इंटरनेट और WWW का परिचय",
+      "summary_hi": "Internet networks ka network hai. WWW (World Wide Web) ke inventor Tim Berners-Lee hain (1989).",
+      "summary_en": "The Internet is a global network of networks. Tim Berners-Lee invented the World Wide Web in 1989.",
+      "points": [
+        {
+          "h": "IP Address & MAC Address",
+          "b_hi": "IPv4: 32-bit (4 octets, 0-255, e.g., 192.168.1.1) | IPv6: 128-bit (Hexadecimal) | MAC Address: 48-bit physical address.",
+          "b_en": "IPv4 is 32-bit (0-255 per octet), IPv6 is 128-bit hexadecimal, and MAC address is a 48-bit hardware address."
+        },
+        {
+          "h": "Protocols & Ports",
+          "b_hi": "HTTP (Port 80), HTTPS (Port 443), FTP (Port 21), SMTP (Port 25 - Email bhejne ke liye), POP3 (Port 110) & IMAP (Port 143 - Email receive karne ke liye).",
+          "b_en": "HTTP (80), HTTPS (443), FTP (21), SMTP (25 for sending mail), POP3 (110) & IMAP (143 for receiving mail)."
+        },
+        {
+          "h": "Network Topologies & OSI",
+          "b_hi": "OSI Model mein 7 layers hoti hain (Physical, Data Link, Network, Transport, Session, Presentation, Application). Star topology mein central Hub/Switch hota hai.",
+          "b_en": "OSI Model has 7 layers. Star topology connects all nodes to a central Hub or Switch."
+        }
+      ],
+      "trap_hi": "Exam Trap: First Search Engine 'Archie' tha aur First Web Browser 'WorldWideWeb' (baad mein Nexus) tha.",
+      "trap_en": "Exam Trap: Archie was the first search engine, and WorldWideWeb (later Nexus) was the first web browser."
+    },
+    {
+      "id": 7,
+      "code": "CH-07",
+      "title_en": "E-mail, Social Networking & e-Governance",
+      "title_hi": "ई-मेल, सोशल नेटवर्किंग और ई-गवर्नेंस",
+      "summary_hi": "Electronic mail (Ray Tomlinson, 1971) aur government digital services jaise UMANG, DigiLocker, IRCTC.",
+      "summary_en": "Electronic mail (invented by Ray Tomlinson in 1971) and digital public services like UMANG and DigiLocker.",
+      "points": [
+        {
+          "h": "Email Fields (CC vs BCC)",
+          "b_hi": "CC (Carbon Copy): Sabhi recipients ko ek dusre ka email dikhta hai. BCC (Blind Carbon Copy): Recipients ek dusre ka address nahi dekh sakte.",
+          "b_en": "CC makes all recipients visible to each other; BCC hides recipient email addresses from one another."
+        },
+        {
+          "h": "e-Governance Apps",
+          "b_hi": "UMANG: Unified Mobile Application for New-age Governance (13+ languages). DigiLocker: Cloud storage for official documents (1 GB free space).",
+          "b_en": "UMANG stands for Unified Mobile Application for New-age Governance. DigiLocker stores verified digital certificates."
+        },
+        {
+          "h": "Social Media Limits",
+          "b_hi": "Twitter (X) standard post limit: 280 characters. Telegram aur WhatsApp instant messaging apps hain.",
+          "b_en": "Standard X (Twitter) character limit is 280 characters."
+        }
+      ],
+      "trap_hi": "Exam Trap: Email address mein '@' symbol hona compulsory hai aur spaces allowed nahi hote.",
+      "trap_en": "Exam Trap: An email address must contain '@' and cannot contain blank spaces."
+    },
+    {
+      "id": 8,
+      "code": "CH-08",
+      "title_en": "Digital Financial Tools & Applications",
+      "title_hi": "डिजिटल वित्तीय उपकरण (UPI, AEPS, NEFT, RTGS)",
+      "summary_hi": "Cashless banking systems jo NPCI (National Payments Corporation of India) aur RBI dwara operate kiye jate hain.",
+      "summary_en": "Digital payment ecosystems operated by NPCI and RBI.",
+      "points": [
+        {
+          "h": "UPI & USSD (*99#)",
+          "b_hi": "UPI (Unified Payments Interface) NPCI ne launch kiya. Bina internet ke mobile banking ke liye *99# (USSD) dial karte hain.",
+          "b_en": "UPI is developed by NPCI. Dial *99# for offline USSD-based mobile banking."
+        },
+        {
+          "h": "NEFT, RTGS & IMPS",
+          "b_hi": "NEFT: No minimum limit, 24x7 batches. RTGS: Minimum ₹2 Lakh, real-time gross settlement. IMPS: 24x7 instant transfer.",
+          "b_en": "NEFT has no minimum limit; RTGS has a ₹2 Lakh minimum limit; IMPS provides 24x7 instant interbank transfer."
+        },
+        {
+          "h": "AEPS & Cards",
+          "b_hi": "AEPS: Aadhaar Enabled Payment System (Biometric + Aadhaar number). CVV: Card Verification Value (Visa/Mastercard mein 3 digits, Amex mein 4 digits).",
+          "b_en": "AEPS uses Aadhaar & biometrics. CVV is 3 digits on Visa/Mastercard/RuPay and 4 digits on American Express."
+        }
+      ],
+      "trap_hi": "Exam Trap: RTGS mein minimum transfer limit ₹2,00,000 (2 Lakh) hoti hai, koi maximum cap nahi hai.",
+      "trap_en": "Exam Trap: RTGS requires a minimum transaction of ₹2 Lakh."
+    },
+    {
+      "id": 9,
+      "code": "CH-09",
+      "title_en": "Overview of FutureSkills & Cyber Security",
+      "title_hi": "फ्यूचर स्किल्स और साइबर सुरक्षा (IoT, AI, Blockchain)",
+      "summary_hi": "Emerging technologies (IoT, Big Data, Cloud, AI, RPA, 3D Printing) aur cyber attacks se bachav.",
+      "summary_en": "Emerging Industry 4.0 technologies and cyber security best practices.",
+      "points": [
+        {
+          "h": "FutureSkills Technologies",
+          "b_hi": "IoT (Internet of Things - Kevin Ashton), AI (John McCarthy), Cloud Computing (SaaS, PaaS, IaaS), Blockchain (Crypto ledger), RPA (Robotic Process Automation).",
+          "b_en": "IoT (coined by Kevin Ashton), AI (John McCarthy), Cloud Models (IaaS, PaaS, SaaS), Blockchain, and RPA."
+        },
+        {
+          "h": "Cyber Threats & Security",
+          "b_hi": "Phishing: Fake emails/links se password churana. Ransomware: Files encrypt karke firoti mangna. Firewall: Unauthorized network traffic block karta hai.",
+          "b_en": "Phishing steals credentials via fake links; Ransomware locks files for ransom; Firewalls filter unauthorized traffic."
+        }
+      ],
+      "trap_hi": "Exam Trap: OTP (One-Time Password) aur 2FA (Two-Factor Authentication) account security badhate hain; OTP kisi ke saath share nahi karna chahiye.",
+      "trap_en": "Exam Trap: OTP stands for One-Time Password and provides dynamic two-factor authentication."
+    }
+  ],
+  "shortcuts": [
+    {
+      "key": "Ctrl + Shift + P",
+      "desc": "Superscript (LibreOffice Writer)",
+      "cat": "Writer"
+    },
+    {
+      "key": "Ctrl + Shift + B",
+      "desc": "Subscript (LibreOffice Writer)",
+      "cat": "Writer"
+    },
+    {
+      "key": "Ctrl + F12",
+      "desc": "Insert Table (LibreOffice Writer)",
+      "cat": "Writer"
+    },
+    {
+      "key": "F7",
+      "desc": "Spelling & Grammar Check",
+      "cat": "Writer"
+    },
+    {
+      "key": "Ctrl + H",
+      "desc": "Find and Replace",
+      "cat": "Writer"
+    },
+    {
+      "key": "Ctrl + ;",
+      "desc": "Insert Current Date (Calc)",
+      "cat": "Calc"
+    },
+    {
+      "key": "Ctrl + Shift + ;",
+      "desc": "Insert Current Time (Calc)",
+      "cat": "Calc"
+    },
+    {
+      "key": "F2",
+      "desc": "Edit Active Cell (Calc)",
+      "cat": "Calc"
+    },
+    {
+      "key": "Ctrl + 1",
+      "desc": "Format Cells Dialog (Calc)",
+      "cat": "Calc"
+    },
+    {
+      "key": "F5",
+      "desc": "Start Slide Show from 1st Slide",
+      "cat": "Impress"
+    },
+    {
+      "key": "Shift + F5",
+      "desc": "Start Slide Show from Current Slide",
+      "cat": "Impress"
+    },
+    {
+      "key": "Ctrl + M",
+      "desc": "Insert New Slide (Impress)",
+      "cat": "Impress"
+    },
+    {
+      "key": "Ctrl + Shift + Esc",
+      "desc": "Open Windows Task Manager",
+      "cat": "OS"
+    },
+    {
+      "key": "Shift + Delete",
+      "desc": "Permanent Delete (Bypass Recycle Bin)",
+      "cat": "OS"
+    },
+    {
+      "key": "UMANG",
+      "desc": "Unified Mobile Application for New-age Governance",
+      "cat": "Full Form"
+    },
+    {
+      "key": "AEPS",
+      "desc": "Aadhaar Enabled Payment System",
+      "cat": "Full Form"
+    },
+    {
+      "key": "NEFT",
+      "desc": "National Electronic Funds Transfer",
+      "cat": "Full Form"
+    },
+    {
+      "key": "RTGS",
+      "desc": "Real-Time Gross Settlement",
+      "cat": "Full Form"
+    },
+    {
+      "key": "IMPS",
+      "desc": "Immediate Payment Service",
+      "cat": "Full Form"
+    },
+    {
+      "key": "UPI",
+      "desc": "Unified Payments Interface",
+      "cat": "Full Form"
+    },
+    {
+      "key": "USSD",
+      "desc": "Unstructured Supplementary Service Data (*99#)",
+      "cat": "Full Form"
+    },
+    {
+      "key": "SMTP",
+      "desc": "Simple Mail Transfer Protocol (Port 25)",
+      "cat": "Full Form"
+    },
+    {
+      "key": "MICR",
+      "desc": "Magnetic Ink Character Recognition",
+      "cat": "Full Form"
+    },
+    {
+      "key": "BIOS",
+      "desc": "Basic Input Output System",
+      "cat": "Full Form"
+    }
+  ]
+}
