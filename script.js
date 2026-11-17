@@ -306,7 +306,6 @@ function switchPage(page) {
   const activeBtn = document.getElementById(`nav-${page}`);
   if (activeBtn) activeBtn.className = 'nav-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white';
 
-  // Highlight active primary div below header
   const dTheory = document.getElementById('mainDivTheory');
   const dMcqs = document.getElementById('mainDivMcqs');
   dTheory.classList.toggle('ring-2', page === 'theory');
@@ -505,14 +504,12 @@ function startRandomCBT(count) {
   switchPage('quiz');
   if (!MCQS_DATA || MCQS_DATA.length === 0) return;
 
-  // Shuffle questions randomly using Fisher-Yates
   const shuffled = fisherYatesShuffle(MCQS_DATA);
   examQuestions = shuffled.slice(0, Math.min(count, shuffled.length));
 
   currentQIndex = 0;
   userAnswers = {};
   markedReview = {};
-  // Proportional NIELIT timer (e.g. 25->20m, 50->45m, 75->65m, 100->90m)
   const timeMap = { 25: 20 * 60, 50: 45 * 60, 75: 65 * 60, 100: 90 * 60 };
   secondsLeft = timeMap[count] || examQuestions.length * 50;
 
@@ -669,4 +666,62 @@ function submitCBTExam() {
       </div>
     `;
   }).join('');
+}
+
+// === QUICK ACTIONS (3-DOTS MENU) LOGIC ===
+let deferredInstallPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+});
+
+function openQuickActions() {
+  resetQaMenu();
+  document.getElementById('quickActionsModal').classList.remove('hidden');
+}
+
+function closeQuickActions() {
+  document.getElementById('quickActionsModal').classList.add('hidden');
+}
+
+function resetQaMenu() {
+  document.getElementById('qaMainMenu').classList.remove('hidden');
+  document.getElementById('qaAppInfoPanel').classList.add('hidden');
+  document.getElementById('qaDevInfoPanel').classList.add('hidden');
+}
+
+function showQaSubPanel(panel) {
+  document.getElementById('qaMainMenu').classList.add('hidden');
+  if (panel === 'appInfo') {
+    document.getElementById('qaAppInfoPanel').classList.remove('hidden');
+  } else if (panel === 'devInfo') {
+    document.getElementById('qaDevInfoPanel').classList.remove('hidden');
+  }
+}
+
+async function handleInstallApp() {
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    const { outcome } = await deferredInstallPrompt.userChoice;
+    if (outcome === 'accepted') deferredInstallPrompt = null;
+  } else {
+    alert('App install karne ke liye browser menu (⋮) mein jakar "Add to Home Screen" ya "Install App" par click karein.');
+  }
+}
+
+async function handleSharePortal() {
+  const shareData = {
+    title: 'Kaushalji • NIELIT CCC Masterclass Portal',
+    text: 'NIELIT CCC ke sabhi 9 chapters ke Bilingual Notes aur 25/50/75/100 CBT Practice Tests yahan dekhein!',
+    url: window.location.href
+  };
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {}
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('Portal link clipboard par copy ho gaya hai!');
+  }
 }
