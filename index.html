@@ -9,6 +9,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .quick-card-glow {
+    box-shadow: 0 0 35px rgba(34, 211, 238, 0.22), inset 0 0 15px rgba(34, 211, 238, 0.08);
+  }
+</style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
 
@@ -31,10 +36,9 @@
   </div>
 </div>
 
-<!-- AUTH SECTION (Hidden until 2s splash completes) -->
+<!-- AUTH SECTION -->
 <div id="authView" class="hidden min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-950 via-blue-950/40 to-slate-950">
   <div class="w-full max-w-5xl grid md:grid-cols-12 bg-slate-900/90 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl backdrop-blur-xl animate-fadeIn">
-    <!-- Left Branding -->
     <div class="md:col-span-5 bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 p-8 flex flex-col justify-between text-white">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-xs font-semibold tracking-wider uppercase mb-6">
@@ -58,14 +62,12 @@
       </button>
     </div>
 
-    <!-- Right Forms -->
     <div class="md:col-span-7 p-6 sm:p-10">
       <div class="flex gap-2 p-1 bg-slate-800/80 rounded-xl mb-6">
         <button id="tabLoginBtn" onclick="switchAuthTab('login')" class="flex-1 py-2.5 rounded-lg text-sm font-bold bg-blue-600 text-white transition">Student Login</button>
         <button id="tabRegBtn" onclick="switchAuthTab('register')" class="flex-1 py-2.5 rounded-lg text-sm font-bold text-slate-400 hover:text-white transition">New Registration</button>
       </div>
 
-      <!-- LOGIN FORM -->
       <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold text-slate-400 uppercase mb-1.5">Username</label>
@@ -90,7 +92,6 @@
         </button>
       </form>
 
-      <!-- REGISTER FORM -->
       <form id="regForm" onsubmit="handleRegister(event)" class="space-y-3.5 hidden">
         <div class="grid sm:grid-cols-2 gap-3">
           <div>
@@ -103,13 +104,10 @@
             <span id="userAvailMsg" class="text-[11px] font-medium"></span>
           </div>
         </div>
-
         <div>
           <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Password</label>
           <input type="password" id="regPass" required placeholder="Create password (min 4 chars)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
         </div>
-
-        <!-- Photo Upload + Avatars -->
         <div class="p-3 rounded-xl bg-slate-800/60 border border-slate-700/80">
           <div class="flex items-center gap-3">
             <img id="regPreviewImg" src="" alt="Avatar" class="w-14 h-14 rounded-full object-cover border-2 border-blue-500 bg-slate-900">
@@ -120,7 +118,6 @@
             </div>
           </div>
         </div>
-
         <div>
           <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Security Captcha</label>
           <div class="flex items-center gap-2">
@@ -130,7 +127,6 @@
             <input type="text" id="regCaptchaInput" required placeholder="Captcha" class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 focus:border-blue-500 focus:outline-none text-sm">
           </div>
         </div>
-
         <p id="regErr" class="text-rose-400 text-xs font-semibold hidden"></p>
         <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 font-bold text-sm shadow-lg shadow-emerald-600/20 transition">
           Create Account & Start Learning ✓
@@ -144,8 +140,8 @@
 <div id="appView" class="hidden min-h-screen flex flex-col">
   <!-- Top Header -->
   <header class="sticky top-0 z-30 bg-slate-900/95 backdrop-blur-lg border-b border-slate-800 px-4 py-3">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-      <div onclick="switchPage('home')" class="cursor-pointer flex items-center gap-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
+      <div onclick="switchPage('home')" class="cursor-pointer flex items-center gap-2.5 sm:gap-3">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-amber-500 flex items-center justify-center font-black text-lg shadow-md">K</div>
         <div>
           <div class="font-extrabold text-sm sm:text-base tracking-tight">Kaushalji • CCC Portal</div>
@@ -161,8 +157,8 @@
         <button onclick="switchPage('quiz')" id="nav-quiz" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-300 hover:text-white">MCQs Exam</button>
       </nav>
 
-      <!-- User Profile Pill -->
-      <div class="flex items-center gap-2.5">
+      <!-- User Profile Pill + 3 Dots Button -->
+      <div class="flex items-center gap-2">
         <button onclick="toggleLang()" id="langToggleBtn" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-amber-400">
           हिं / EN
         </button>
@@ -173,6 +169,15 @@
         <button onclick="logoutUser()" title="Logout" class="px-2.5 py-1.5 rounded-lg bg-rose-600/20 hover:bg-rose-600 text-rose-400 hover:text-white text-xs font-bold transition">
           Exit
         </button>
+
+        <!-- 3 DOTS MENU BUTTON -->
+        <button onclick="openQuickActions()" title="Quick Actions" aria-label="Quick Actions" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 flex items-center justify-center text-cyan-400 hover:text-cyan-300 transition active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="5" r="2"/>
+            <circle cx="12" cy="12" r="2"/>
+            <circle cx="12" cy="19" r="2"/>
+          </svg>
+        </button>
       </div>
     </div>
   </header>
@@ -180,7 +185,6 @@
   <!-- TWO PRIMARY DIVS DIRECTLY BELOW HEADER (THEORY DIV & MCQS DIV) -->
   <div class="bg-slate-900/60 border-b border-slate-800/80 px-4 py-5">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-      <!-- DIV 1: THEORY -->
       <div id="mainDivTheory" onclick="switchPage('theory')" class="cursor-pointer group relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br from-blue-600/20 via-indigo-900/30 to-slate-900 border-2 border-blue-500/40 hover:border-blue-400 transition-all shadow-lg">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
@@ -195,7 +199,6 @@
         </div>
       </div>
 
-      <!-- DIV 2: MCQS -->
       <div id="mainDivMcqs" onclick="openMcqCountSelector()" class="cursor-pointer group relative overflow-hidden rounded-2xl p-6 bg-gradient-to-br from-emerald-600/20 via-teal-900/30 to-slate-900 border-2 border-emerald-500/40 hover:border-emerald-400 transition-all shadow-lg">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
@@ -214,7 +217,6 @@
 
   <!-- Main Content Area -->
   <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6">
-
     <!-- 1. HOME / DASHBOARD PAGE -->
     <section id="page-home" class="space-y-6">
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -231,7 +233,6 @@
         </div>
       </div>
 
-      <!-- KPI Cards -->
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
           <div class="text-xs text-slate-400 font-semibold">Syllabus Completed</div>
@@ -255,7 +256,6 @@
         </div>
       </div>
 
-      <!-- Recent Quiz History -->
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
         <h3 class="font-bold text-base mb-3">📊 Recent CBT Exam & Quiz History</h3>
         <div id="historyContainer" class="text-sm text-slate-400">No exams attempted yet. Click on the MCQs Exam div above to start!</div>
@@ -296,9 +296,8 @@
       <div id="shortcutsGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5"></div>
     </section>
 
-    <!-- 4. CBT QUIZ & MOCK TEST PAGE (25 / 50 / 75 / 100 BUTTONS) -->
+    <!-- 4. CBT QUIZ & MOCK TEST PAGE -->
     <section id="page-quiz" class="hidden space-y-5">
-      <!-- Question Count Selector (25, 50, 75, 100) -->
       <div id="quizLobby" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
         <div class="text-center max-w-xl mx-auto">
           <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-extrabold uppercase tracking-wider">Random CBT Question Generator</span>
@@ -306,7 +305,6 @@
           <p class="text-xs sm:text-sm text-slate-400 mt-1">Har test mein bilkul naye random questions generate honge. Passing marks: 50% (No Negative Marking).</p>
         </div>
 
-        <!-- 4 BIG BUTTONS: 25, 50, 75, 100 -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
           <button onclick="startRandomCBT(25)" class="group p-6 rounded-2xl bg-gradient-to-b from-blue-600/25 to-slate-800/80 border-2 border-blue-500/50 hover:border-blue-400 hover:-translate-y-1 transition-all text-center shadow-lg">
             <div class="text-4xl sm:text-5xl font-black text-blue-400 group-hover:scale-110 transition-transform">25</div>
@@ -334,7 +332,6 @@
         </div>
       </div>
 
-      <!-- Active CBT Exam Arena -->
       <div id="quizArena" class="hidden grid lg:grid-cols-12 gap-5">
         <div class="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
           <div>
@@ -361,7 +358,6 @@
           </div>
         </div>
 
-        <!-- Question Palette Sidebar -->
         <div class="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
           <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
             <img id="cbtUserImg" src="" class="w-11 h-11 rounded-full object-cover border border-blue-500">
@@ -380,7 +376,6 @@
         </div>
       </div>
 
-      <!-- Result & Certificate View -->
       <div id="quizResult" class="hidden space-y-5">
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center space-y-4">
           <div id="resBadge" class="inline-block px-4 py-1.5 rounded-full text-xs font-extrabold uppercase">RESULT</div>
@@ -397,14 +392,12 @@
           </div>
         </div>
 
-        <!-- Answer Key Review -->
         <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
           <h3 class="font-bold text-base mb-4">📝 Detailed Answer Key & Explanations</h3>
           <div id="reviewList" class="space-y-3"></div>
         </div>
       </div>
     </section>
-
   </main>
 </div>
 
@@ -425,6 +418,83 @@
     <div class="p-4 border-t border-slate-800 flex items-center justify-between bg-slate-950/60">
       <button id="markReadBtn" onclick="toggleChapterRead()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-xs font-bold">✓ Mark as Completed (+50 XP)</button>
       <button onclick="closeChapterModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-xs font-bold">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK ACTIONS MODAL (EXACT DESIGN FROM IMAGE) -->
+<div id="quickActionsModal" onclick="if(event.target===this) closeQuickActions()" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+  <div class="w-full max-w-sm rounded-3xl bg-[#162336] border border-cyan-500/30 quick-card-glow overflow-hidden transition-all">
+    <!-- Header -->
+    <div class="px-6 py-4 border-b border-slate-700/70 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="text-lg">📌</span>
+        <h3 class="text-cyan-400 font-extrabold tracking-wider text-sm sm:text-base uppercase">QUICK ACTIONS</h3>
+      </div>
+      <button onclick="closeQuickActions()" class="text-slate-300 hover:text-white text-lg font-bold p-1 rounded-lg hover:bg-slate-700/50 transition">✕</button>
+    </div>
+
+    <!-- Main 4 Buttons List -->
+    <div id="qaMainMenu" class="p-6 space-y-3.5">
+      <button onclick="showQaSubPanel('appInfo')" class="w-full flex items-center gap-3.5 px-4 py-3.5 rounded-2xl bg-[#1f3047] hover:bg-[#273c59] border border-slate-600/50 hover:border-cyan-400/50 text-left text-white font-bold text-sm transition active:scale-[0.98]">
+        <span class="text-lg">⚡</span>
+        <span>App Info</span>
+      </button>
+
+      <button onclick="showQaSubPanel('devInfo')" class="w-full flex items-center gap-3.5 px-4 py-3.5 rounded-2xl bg-[#1f3047] hover:bg-[#273c59] border border-slate-600/50 hover:border-cyan-400/50 text-left text-white font-bold text-sm transition active:scale-[0.98]">
+        <span class="text-lg">💻</span>
+        <span>Developer Info</span>
+      </button>
+
+      <button onclick="handleInstallApp()" class="w-full flex items-center gap-3.5 px-4 py-3.5 rounded-2xl bg-[#1f3047] hover:bg-[#273c59] border border-slate-600/50 hover:border-cyan-400/50 text-left text-white font-bold text-sm transition active:scale-[0.98]">
+        <span class="text-lg">📲</span>
+        <span>Install App</span>
+      </button>
+
+      <button onclick="handleSharePortal()" class="w-full flex items-center gap-3.5 px-4 py-3.5 rounded-2xl bg-[#1f3047] hover:bg-[#273c59] border border-slate-600/50 hover:border-cyan-400/50 text-left text-white font-bold text-sm transition active:scale-[0.98]">
+        <span class="text-lg">🔗</span>
+        <span>Share Portal</span>
+      </button>
+    </div>
+
+    <!-- App Info Sub-Panel -->
+    <div id="qaAppInfoPanel" class="hidden p-6 space-y-4">
+      <div class="p-4 rounded-2xl bg-[#1f3047] border border-slate-600/50 space-y-2 text-xs text-slate-200">
+        <div class="flex items-center justify-between">
+          <span class="font-extrabold text-cyan-400 text-sm">Kaushalji CCC Masterclass</span>
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 font-bold">v2.0 PWA</span>
+        </div>
+        <p class="text-slate-300 leading-relaxed">NIELIT CCC (Course on Computer Concepts) ke sabhi 9 chapters ke Bilingual Notes, Shortcuts Vault aur 25/50/75/100 Random CBT Mock Tests ke liye banaya gaya offline-ready educational portal.</p>
+        <div class="pt-2 border-t border-slate-700/70 text-[11px] text-slate-400">
+          • 100% Offline LocalStorage Sync<br>
+          • Voice Narration & Instant Grade Certificate
+        </div>
+      </div>
+      <button onclick="resetQaMenu()" class="w-full py-2.5 rounded-xl bg-slate-700/70 hover:bg-slate-700 text-xs font-bold text-cyan-300">← Back to Quick Actions</button>
+    </div>
+
+    <!-- Developer Info Sub-Panel (With YouTube & Instagram Links) -->
+    <div id="qaDevInfoPanel" class="hidden p-6 space-y-4">
+      <div class="p-4 rounded-2xl bg-[#1f3047] border border-slate-600/50 text-center space-y-2">
+        <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center font-black text-2xl text-white shadow-lg">K</div>
+        <h4 class="font-extrabold text-base text-white">Kaushalji</h4>
+        <p class="text-xs text-cyan-300 font-semibold">Full Stack Web Developer & Tech Educator</p>
+        <p class="text-[11px] text-slate-300">NIELIT 'O' Level & CCC Digital Education Specialist</p>
+      </div>
+
+      <div class="space-y-2.5">
+        <a href="https://youtube.com/@devil_king.01r?si=3QkN826bob8v7rWs" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-between px-4 py-3 rounded-2xl bg-rose-600/20 hover:bg-rose-600/30 border border-rose-500/40 text-white font-bold text-xs transition">
+          <span class="flex items-center gap-2.5"><span class="text-base">▶️</span> YouTube Channel (@devil_king.01r)</span>
+          <span>↗</span>
+        </a>
+
+        <a href="https://www.instagram.com/the_devil_world_01?cplk=MWxmbjRseW8wMmxzaw==" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-between px-4 py-3 rounded-2xl bg-pink-600/20 hover:bg-pink-600/30 border border-pink-500/40 text-white font-bold text-xs transition">
+          <span class="flex items-center gap-2.5"><span class="text-base">📸</span> Instagram (@the_devil_world_01)</span>
+          <span>↗</span>
+        </a>
+      </div>
+
+      <button onclick="resetQaMenu()" class="w-full py-2.5 rounded-xl bg-slate-700/70 hover:bg-slate-700 text-xs font-bold text-cyan-300">← Back to Quick Actions</button>
     </div>
   </div>
 </div>
