@@ -5,12 +5,7 @@
     "type": "mcq",
     "q_en": "What is the default file extension of LibreOffice Writer?",
     "q_hi": "LibreOffice Writer ka default file extension kya hota hai?",
-    "opts": [
-      ".docx",
-      ".odt",
-      ".ods",
-      ".odp"
-    ],
+    "opts": [".docx", ".odt", ".ods", ".odp"],
     "ans": 1,
     "exp_hi": "LibreOffice Writer ka default extension .odt (OpenDocument Text) hota hai."
   },
@@ -20,12 +15,7 @@
     "type": "mcq",
     "q_en": "Which shortcut key is used for Superscript in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Superscript ke liye kaunsi shortcut key use hoti hai?",
-    "opts": [
-      "Ctrl + Shift + +",
-      "Ctrl + Shift + P",
-      "Ctrl + Shift + B",
-      "Alt + P"
-    ],
+    "opts": ["Ctrl + Shift + +", "Ctrl + Shift + P", "Ctrl + Shift + B", "Alt + P"],
     "ans": 1,
     "exp_hi": "Writer mein Superscript ke liye Ctrl + Shift + P aur Subscript ke liye Ctrl + Shift + B use hota hai."
   },
@@ -35,12 +25,7 @@
     "type": "mcq",
     "q_en": "What is the maximum zoom percentage in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein maximum zoom percentage kitna hota hai?",
-    "opts": [
-      "400%",
-      "500%",
-      "600%",
-      "3000%"
-    ],
+    "opts": ["400%", "500%", "600%", "3000%"],
     "ans": 2,
     "exp_hi": "Writer mein Max Zoom 600% (Min 20%), Calc mein 400%, aur Impress mein 3000% hota hai."
   },
@@ -50,12 +35,7 @@
     "type": "mcq",
     "q_en": "What is the minimum zoom percentage in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein minimum zoom percentage kitna hota hai?",
-    "opts": [
-      "5%",
-      "10%",
-      "20%",
-      "50%"
-    ],
+    "opts": ["5%", "10%", "20%", "50%"],
     "ans": 2,
     "exp_hi": "LibreOffice Writer mein minimum zoom 20% hota hai."
   },
@@ -65,12 +45,7 @@
     "type": "mcq",
     "q_en": "Which shortcut key is used to insert a table in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein table insert karne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + T",
-      "Ctrl + F12",
-      "Alt + F12",
-      "Shift + T"
-    ],
+    "opts": ["Ctrl + T", "Ctrl + F12", "Alt + F12", "Shift + T"],
     "ans": 1,
     "exp_hi": "Ctrl + F12 se LibreOffice Writer mein table insert hota hai."
   },
@@ -80,12 +55,7 @@
     "type": "mcq",
     "q_en": "Under which menu is the Mail Merge Wizard located in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Mail Merge Wizard kis menu mein hota hai?",
-    "opts": [
-      "Insert",
-      "Format",
-      "Tools",
-      "View"
-    ],
+    "opts": ["Insert", "Format", "Tools", "View"],
     "ans": 2,
     "exp_hi": "Mail Merge Wizard Tools menu ke andar hota hai."
   },
@@ -95,12 +65,7 @@
     "type": "mcq",
     "q_en": "Which function key is used for Spell Check in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Spell Check ke liye kaunsi function key dabate hain?",
-    "opts": [
-      "F5",
-      "F7",
-      "F9",
-      "F12"
-    ],
+    "opts": ["F5", "F7", "F9", "F12"],
     "ans": 1,
     "exp_hi": "F7 se Spelling & Grammar check khulta hai."
   },
@@ -110,12 +75,7 @@
     "type": "mcq",
     "q_en": "What is the shortcut key for Page Break in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Page Break ki shortcut key kya hai?",
-    "opts": [
-      "Shift + Enter",
-      "Ctrl + Enter",
-      "Alt + Enter",
-      "Ctrl + Shift + Enter"
-    ],
+    "opts": ["Shift + Enter", "Ctrl + Enter", "Alt + Enter", "Ctrl + Shift + Enter"],
     "ans": 1,
     "exp_hi": "Ctrl + Enter se Page Break insert hota hai."
   },
@@ -125,12 +85,7 @@
     "type": "mcq",
     "q_en": "What is the default font name in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer ka default font naam kya hai?",
-    "opts": [
-      "Calibri",
-      "Arial",
-      "Liberation Serif",
-      "Times New Roman"
-    ],
+    "opts": ["Calibri", "Arial", "Liberation Serif", "Times New Roman"],
     "ans": 2,
     "exp_hi": "LibreOffice Writer mein default font Liberation Serif (12 pt) hota hai."
   },
@@ -140,12 +95,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens Find and Replace in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Find and Replace kholne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + F",
-      "Ctrl + H",
-      "Ctrl + R",
-      "Ctrl + G"
-    ],
+    "opts": ["Ctrl + F", "Ctrl + H", "Ctrl + R", "Ctrl + G"],
     "ans": 1,
     "exp_hi": "Ctrl + H se Find & Replace dialog box khulta hai."
   },
@@ -155,12 +105,7 @@
     "type": "mcq",
     "q_en": "How many total columns are there in a LibreOffice Calc worksheet?",
     "q_hi": "LibreOffice Calc worksheet mein kul kitne columns hote hain?",
-    "opts": [
-      "256",
-      "1024",
-      "16384",
-      "1048576"
-    ],
+    "opts": ["256", "1024", "16384", "1048576"],
     "ans": 1,
     "exp_hi": "LibreOffice Calc mein 1,024 columns (last column AMJ) aur 1,048,576 rows hoti hain."
   },
@@ -170,12 +115,7 @@
     "type": "mcq",
     "q_en": "What is the name of the last column in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc ke aakhiri column ka naam kya hota hai?",
-    "opts": [
-      "XFD",
-      "IV",
-      "AMJ",
-      "ZZZ"
-    ],
+    "opts": ["XFD", "IV", "AMJ", "ZZZ"],
     "ans": 2,
     "exp_hi": "LibreOffice Calc ka 1024th (last) column AMJ hota hai (Excel mein XFD hota hai)."
   },
@@ -185,12 +125,7 @@
     "type": "mcq",
     "q_en": "What will be the output of =ROUND(175.678, 2) in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein =ROUND(175.678, 2) ka output kya hoga?",
-    "opts": [
-      "175.67",
-      "175.68",
-      "176",
-      "175.7"
-    ],
+    "opts": ["175.67", "175.68", "176", "175.7"],
     "ans": 1,
     "exp_hi": "2 decimal places tak round karne par teesra digit 8 (>5) hone ke karan 175.68 output aayega."
   },
@@ -200,12 +135,7 @@
     "type": "mcq",
     "q_en": "Which shortcut key inserts the current date in a LibreOffice Calc cell?",
     "q_hi": "LibreOffice Calc cell mein current date insert karne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + D",
-      "Ctrl + ;",
-      "Ctrl + Shift + ;",
-      "Alt + D"
-    ],
+    "opts": ["Ctrl + D", "Ctrl + ;", "Ctrl + Shift + ;", "Alt + D"],
     "ans": 1,
     "exp_hi": "Ctrl + ; se current date aur Ctrl + Shift + ; se current time insert hota hai."
   },
@@ -215,12 +145,7 @@
     "type": "mcq",
     "q_en": "What is the default file extension of LibreOffice Calc?",
     "q_hi": "LibreOffice Calc ka default file extension kya hota hai?",
-    "opts": [
-      ".xlsx",
-      ".odt",
-      ".ods",
-      ".odp"
-    ],
+    "opts": [".xlsx", ".odt", ".ods", ".odp"],
     "ans": 2,
     "exp_hi": "LibreOffice Calc ka default extension .ods (OpenDocument Spreadsheet) hota hai."
   },
@@ -230,12 +155,7 @@
     "type": "mcq",
     "q_en": "What is the maximum zoom percentage in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein maximum zoom percentage kitna hota hai?",
-    "opts": [
-      "200%",
-      "400%",
-      "500%",
-      "600%"
-    ],
+    "opts": ["200%", "400%", "500%", "600%"],
     "ans": 1,
     "exp_hi": "LibreOffice Calc mein maximum zoom 400% aur minimum 20% hota hai."
   },
@@ -245,12 +165,7 @@
     "type": "mcq",
     "q_en": "What is the result of =MOD(17, 5) in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein =MOD(17, 5) ka result kya hoga?",
-    "opts": [
-      "3",
-      "2",
-      "3.4",
-      "5"
-    ],
+    "opts": ["3", "2", "3.4", "5"],
     "ans": 1,
     "exp_hi": "MOD function remainder (sheshphal) deta hai: 17 ko 5 se bhag dene par 2 bachta hai."
   },
@@ -260,12 +175,7 @@
     "type": "mcq",
     "q_en": "Which key is pressed to edit an active cell in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein active cell ko edit karne ke liye kaunsi key dabate hain?",
-    "opts": [
-      "F1",
-      "F2",
-      "F4",
-      "F5"
-    ],
+    "opts": ["F1", "F2", "F4", "F5"],
     "ans": 1,
     "exp_hi": "F2 dabane se cell edit mode mein khulta hai."
   },
@@ -275,12 +185,7 @@
     "type": "mcq",
     "q_en": "Every formula in LibreOffice Calc must begin with which symbol?",
     "q_hi": "LibreOffice Calc mein har formula kis symbol se shuru hota hai?",
-    "opts": [
-      "+",
-      "=",
-      "@",
-      "#"
-    ],
+    "opts": ["+", "=", "@", "#"],
     "ans": 1,
     "exp_hi": "Calc aur Excel mein har formula '=' (Equal) sign se shuru hota hai."
   },
@@ -290,12 +195,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens the Format Cells dialog in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein Format Cells dialog kholne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + 1",
-      "Ctrl + 2",
-      "Alt + 1",
-      "Shift + 1"
-    ],
+    "opts": ["Ctrl + 1", "Ctrl + 2", "Alt + 1", "Shift + 1"],
     "ans": 0,
     "exp_hi": "Ctrl + 1 se Format Cells dialog box khulta hai."
   },
@@ -305,12 +205,7 @@
     "type": "mcq",
     "q_en": "Which shortcut key is used to insert a new slide in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein nayi slide insert karne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + N",
-      "Ctrl + M",
-      "Ctrl + S",
-      "Shift + M"
-    ],
+    "opts": ["Ctrl + N", "Ctrl + M", "Ctrl + S", "Shift + M"],
     "ans": 1,
     "exp_hi": "Ctrl + M se nayi slide insert hoti hai, jabki Ctrl + N se naya presentation banta hai."
   },
@@ -320,12 +215,7 @@
     "type": "mcq",
     "q_en": "What is the maximum zoom percentage in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein maximum zoom percentage kitna hota hai?",
-    "opts": [
-      "400%",
-      "600%",
-      "1000%",
-      "3000%"
-    ],
+    "opts": ["400%", "600%", "1000%", "3000%"],
     "ans": 3,
     "exp_hi": "LibreOffice Impress mein minimum zoom 5% aur maximum zoom 3000% hota hai."
   },
@@ -335,12 +225,7 @@
     "type": "mcq",
     "q_en": "What is the default file extension of LibreOffice Impress?",
     "q_hi": "LibreOffice Impress ka default file extension kya hota hai?",
-    "opts": [
-      ".pptx",
-      ".odp",
-      ".ods",
-      ".odt"
-    ],
+    "opts": [".pptx", ".odp", ".ods", ".odt"],
     "ans": 1,
     "exp_hi": "LibreOffice Impress ka default extension .odp (OpenDocument Presentation) hota hai."
   },
@@ -350,12 +235,7 @@
     "type": "mcq",
     "q_en": "Which shortcut starts the slideshow from the current slide in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein current slide se slideshow start karne ki shortcut key kya hai?",
-    "opts": [
-      "F5",
-      "Shift + F5",
-      "Ctrl + F5",
-      "Alt + F5"
-    ],
+    "opts": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
     "ans": 1,
     "exp_hi": "Shift + F5 se current slide se aur F5 se pehli slide se slideshow start hota hai."
   },
@@ -365,12 +245,7 @@
     "type": "mcq",
     "q_en": "Which key exits a running slideshow in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein chalte hue slideshow ko band karne ke liye kaunsi key dabate hain?",
-    "opts": [
-      "End",
-      "Esc",
-      "Backspace",
-      "Ctrl + Q"
-    ],
+    "opts": ["End", "Esc", "Backspace", "Ctrl + Q"],
     "ans": 1,
     "exp_hi": "Esc key dabane se slideshow terminate ho jata hai."
   },
@@ -380,12 +255,7 @@
     "type": "mcq",
     "q_en": "What is the minimum transaction amount limit for RTGS?",
     "q_hi": "RTGS ke liye minimum transaction limit kitni hoti hai?",
-    "opts": [
-      "₹1",
-      "₹50,000",
-      "₹1,00,000",
-      "₹2,00,000"
-    ],
+    "opts": ["₹1", "₹50,000", "₹1,00,000", "₹2,00,000"],
     "ans": 3,
     "exp_hi": "RTGS (Real-Time Gross Settlement) mein minimum transfer limit ₹2 Lakh hoti hai."
   },
@@ -395,12 +265,7 @@
     "type": "mcq",
     "q_en": "Which USSD code is dialed to access offline mobile banking services in India?",
     "q_hi": "Bharat mein offline mobile banking services ke liye kaunsa USSD code dial kiya jata hai?",
-    "opts": [
-      "*123#",
-      "*99#",
-      "*121#",
-      "*400#"
-    ],
+    "opts": ["*123#", "*99#", "*121#", "*400#"],
     "ans": 1,
     "exp_hi": "*99# NPCI ki USSD based mobile banking service hai jo bina internet ke chalti hai."
   },
@@ -410,12 +275,7 @@
     "type": "mcq",
     "q_en": "What does 'P' stand for in AEPS?",
     "q_hi": "AEPS mein 'P' ka poora naam kya hai?",
-    "opts": [
-      "Public",
-      "Payment",
-      "Portal",
-      "Private"
-    ],
+    "opts": ["Public", "Payment", "Portal", "Private"],
     "ans": 1,
     "exp_hi": "AEPS ka full form Aadhaar Enabled Payment System hai."
   },
@@ -425,12 +285,7 @@
     "type": "mcq",
     "q_en": "Who operates UPI (Unified Payments Interface) in India?",
     "q_hi": "Bharat mein UPI ko kaunsi sanstha operate karti hai?",
-    "opts": [
-      "SEBI",
-      "NPCI",
-      "SIDBI",
-      "NABARD"
-    ],
+    "opts": ["SEBI", "NPCI", "SIDBI", "NABARD"],
     "ans": 1,
     "exp_hi": "NPCI (National Payments Corporation of India) UPI, RuPay, AEPS aur IMPS operate karta hai."
   },
@@ -440,12 +295,7 @@
     "type": "mcq",
     "q_en": "How many digits are there in a CVV number on Visa/Mastercard/RuPay cards?",
     "q_hi": "Visa, Mastercard aur RuPay card par CVV number kitne digits ka hota hai?",
-    "opts": [
-      "2",
-      "3",
-      "4",
-      "6"
-    ],
+    "opts": ["2", "3", "4", "6"],
     "ans": 1,
     "exp_hi": "Visa, Mastercard aur RuPay mein 3 digits ka CVV hota hai (American Express mein 4 digits)."
   },
@@ -455,12 +305,7 @@
     "type": "mcq",
     "q_en": "What is the full form of IFSC?",
     "q_hi": "IFSC ka full form kya hota hai?",
-    "opts": [
-      "Indian Financial System Code",
-      "International Fund System Code",
-      "Indian Fund Service Code",
-      "Internal Financial Security Code"
-    ],
+    "opts": ["Indian Financial System Code", "International Fund System Code", "Indian Fund Service Code", "Internal Financial Security Code"],
     "ans": 0,
     "exp_hi": "IFSC = Indian Financial System Code (11 alphanumeric characters)."
   },
@@ -470,12 +315,7 @@
     "type": "mcq",
     "q_en": "How many characters are in an IFSC code?",
     "q_hi": "IFSC code mein kul kitne characters hote hain?",
-    "opts": [
-      "8",
-      "10",
-      "11",
-      "12"
-    ],
+    "opts": ["8", "10", "11", "12"],
     "ans": 2,
     "exp_hi": "IFSC code 11 characters ka hota hai jisme 5th character hamesha '0' (Zero) hota hai."
   },
@@ -485,12 +325,7 @@
     "type": "mcq",
     "q_en": "What is the full form of IMPS?",
     "q_hi": "IMPS ka poora naam kya hai?",
-    "opts": [
-      "Immediate Payment Service",
-      "Instant Money Payment System",
-      "Indian Mobile Payment Service",
-      "Interbank Money Transfer Service"
-    ],
+    "opts": ["Immediate Payment Service", "Instant Money Payment System", "Indian Mobile Payment Service", "Interbank Money Transfer Service"],
     "ans": 0,
     "exp_hi": "IMPS = Immediate Payment Service."
   },
@@ -500,12 +335,7 @@
     "type": "mcq",
     "q_en": "How many digits are in an Aadhaar number?",
     "q_hi": "Aadhaar card number mein kitne digits hote hain?",
-    "opts": [
-      "10",
-      "12",
-      "14",
-      "16"
-    ],
+    "opts": ["10", "12", "14", "16"],
     "ans": 1,
     "exp_hi": "UIDAI dwara jari Aadhaar number 12 digits ka hota hai."
   },
@@ -515,12 +345,7 @@
     "type": "mcq",
     "q_en": "Which symbol is used in a UPI ID (VPA)?",
     "q_hi": "UPI ID (Virtual Payment Address) mein kaunsa symbol hota hai?",
-    "opts": [
-      "#",
-      "@",
-      "$",
-      "&"
-    ],
+    "opts": ["#", "@", "$", "&"],
     "ans": 1,
     "exp_hi": "UPI ID mein '@' symbol hota hai, jaise username@okicici."
   },
@@ -530,12 +355,7 @@
     "type": "mcq",
     "q_en": "What is the full form of UMANG app?",
     "q_hi": "UMANG app ka full form kya hai?",
-    "opts": [
-      "Unified Mobile Application for New-age Governance",
-      "Universal Mobile App for National Governance",
-      "United Mobile Access for New Government",
-      "Unified Management App for Governance"
-    ],
+    "opts": ["Unified Mobile Application for New-age Governance", "Universal Mobile App for National Governance", "United Mobile Access for New Government", "Unified Management App for Governance"],
     "ans": 0,
     "exp_hi": "UMANG = Unified Mobile Application for New-age Governance."
   },
@@ -545,12 +365,7 @@
     "type": "mcq",
     "q_en": "In Email, which field hides recipient email addresses from other recipients?",
     "q_hi": "Email mein kaunsa field baki recipients se email addresses chhupata hai?",
-    "opts": [
-      "To",
-      "CC",
-      "BCC",
-      "Subject"
-    ],
+    "opts": ["To", "CC", "BCC", "Subject"],
     "ans": 2,
     "exp_hi": "BCC (Blind Carbon Copy) mein recipients ek dusre ka email address nahi dekh sakte."
   },
@@ -560,12 +375,7 @@
     "type": "mcq",
     "q_en": "Who is credited with inventing Electronic Mail (Email) in 1971?",
     "q_hi": "1971 mein Email ka avishkar kisne kiya tha?",
-    "opts": [
-      "Tim Berners-Lee",
-      "Ray Tomlinson",
-      "Vint Cerf",
-      "Bill Gates"
-    ],
+    "opts": ["Tim Berners-Lee", "Ray Tomlinson", "Vint Cerf", "Bill Gates"],
     "ans": 1,
     "exp_hi": "Ray Tomlinson ne 1971 mein pehla network email bheja aur '@' symbol chuna."
   },
@@ -575,12 +385,7 @@
     "type": "mcq",
     "q_en": "How much free cloud storage is provided to citizens in DigiLocker?",
     "q_hi": "DigiLocker mein nagrikon ko kitna free cloud storage milta hai?",
-    "opts": [
-      "100 MB",
-      "500 MB",
-      "1 GB",
-      "5 GB"
-    ],
+    "opts": ["100 MB", "500 MB", "1 GB", "5 GB"],
     "ans": 2,
     "exp_hi": "DigiLocker mein 1 GB free cloud storage milta hai."
   },
@@ -590,12 +395,7 @@
     "type": "mcq",
     "q_en": "What is the maximum character limit for a standard post on X (formerly Twitter)?",
     "q_hi": "X (pehle Twitter) par ek standard post ki maximum character limit kitni hai?",
-    "opts": [
-      "140",
-      "280",
-      "500",
-      "1000"
-    ],
+    "opts": ["140", "280", "500", "1000"],
     "ans": 1,
     "exp_hi": "Standard tweet/post limit 280 characters hoti hai."
   },
@@ -605,12 +405,7 @@
     "type": "mcq",
     "q_en": "Which folder stores unsent emails that you started writing?",
     "q_hi": "Likhe gaye lekin abhi tak bheje nahi gaye emails kis folder mein save hote hain?",
-    "opts": [
-      "Inbox",
-      "Outbox",
-      "Drafts",
-      "Trash"
-    ],
+    "opts": ["Inbox", "Outbox", "Drafts", "Trash"],
     "ans": 2,
     "exp_hi": "Drafts folder mein adhure ya unsent emails save rehte hain."
   },
@@ -620,12 +415,7 @@
     "type": "mcq",
     "q_en": "What is unwanted bulk email commonly called?",
     "q_hi": "Anchahe (unwanted) bulk emails ko kya kaha jata hai?",
-    "opts": [
-      "Draft",
-      "Spam",
-      "Trash",
-      "Archive"
-    ],
+    "opts": ["Draft", "Spam", "Trash", "Archive"],
     "ans": 1,
     "exp_hi": "Unwanted promotional ya bulk emails ko Spam (ya Junk mail) kehte hain."
   },
@@ -635,12 +425,7 @@
     "type": "mcq",
     "q_en": "What is the bit length of an IPv6 address?",
     "q_hi": "IPv6 address kitne bits ka hota hai?",
-    "opts": [
-      "32 bits",
-      "48 bits",
-      "64 bits",
-      "128 bits"
-    ],
+    "opts": ["32 bits", "48 bits", "64 bits", "128 bits"],
     "ans": 3,
     "exp_hi": "IPv4 32-bit ka hota hai jabki IPv6 128-bit hexadecimal address hota hai."
   },
@@ -650,12 +435,7 @@
     "type": "mcq",
     "q_en": "Which protocol is used to send emails over the internet?",
     "q_hi": "Internet par email bhejne ke liye kaunsa protocol use hota hai?",
-    "opts": [
-      "POP3",
-      "IMAP",
-      "SMTP",
-      "FTP"
-    ],
+    "opts": ["POP3", "IMAP", "SMTP", "FTP"],
     "ans": 2,
     "exp_hi": "SMTP (Simple Mail Transfer Protocol) email bhejne ke liye aur POP3/IMAP receive karne ke liye use hota hai."
   },
@@ -665,12 +445,7 @@
     "type": "mcq",
     "q_en": "How many layers are there in the OSI Reference Model?",
     "q_hi": "OSI Reference Model mein kul kitni layers hoti hain?",
-    "opts": [
-      "4",
-      "5",
-      "6",
-      "7"
-    ],
+    "opts": ["4", "5", "6", "7"],
     "ans": 3,
     "exp_hi": "OSI Model mein 7 layers hoti hain (Physical se Application tak)."
   },
@@ -680,12 +455,7 @@
     "type": "mcq",
     "q_en": "Who invented the World Wide Web (WWW)?",
     "q_hi": "World Wide Web (WWW) ka avishkar kisne kiya?",
-    "opts": [
-      "Tim Berners-Lee",
-      "Charles Babbage",
-      "Alan Turing",
-      "Steve Jobs"
-    ],
+    "opts": ["Tim Berners-Lee", "Charles Babbage", "Alan Turing", "Steve Jobs"],
     "ans": 0,
     "exp_hi": "Tim Berners-Lee ne 1989 mein WWW ka avishkar kiya."
   },
@@ -695,12 +465,7 @@
     "type": "mcq",
     "q_en": "Which was the world's first search engine?",
     "q_hi": "Duniya ka pehla search engine kaunsa tha?",
-    "opts": [
-      "Google",
-      "Yahoo",
-      "Archie",
-      "AltaVista"
-    ],
+    "opts": ["Google", "Yahoo", "Archie", "AltaVista"],
     "ans": 2,
     "exp_hi": "Archie (1990) duniya ka pehla search engine tha."
   },
@@ -710,12 +475,7 @@
     "type": "mcq",
     "q_en": "What is the port number of HTTPS?",
     "q_hi": "HTTPS ka default port number kya hota hai?",
-    "opts": [
-      "21",
-      "25",
-      "80",
-      "443"
-    ],
+    "opts": ["21", "25", "80", "443"],
     "ans": 3,
     "exp_hi": "HTTP port 80 aur HTTPS (Secure) port 443 use karta hai."
   },
@@ -725,12 +485,7 @@
     "type": "mcq",
     "q_en": "Which network topology uses a central Hub or Switch to connect all nodes?",
     "q_hi": "Kis network topology mein sabhi computers ek central Hub ya Switch se jude hote hain?",
-    "opts": [
-      "Bus",
-      "Ring",
-      "Star",
-      "Mesh"
-    ],
+    "opts": ["Bus", "Ring", "Star", "Mesh"],
     "ans": 2,
     "exp_hi": "Star topology mein central Hub ya Switch hota hai."
   },
@@ -740,12 +495,7 @@
     "type": "mcq",
     "q_en": "What is the full form of URL?",
     "q_hi": "URL ka poora naam kya hai?",
-    "opts": [
-      "Uniform Resource Locator",
-      "Universal Resource Link",
-      "Uniform Registered Locator",
-      "Unified Resource Locator"
-    ],
+    "opts": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Registered Locator", "Unified Resource Locator"],
     "ans": 0,
     "exp_hi": "URL = Uniform Resource Locator."
   },
@@ -755,12 +505,7 @@
     "type": "mcq",
     "q_en": "Which Linux command is used to display the current working directory?",
     "q_hi": "Linux mein current working directory dekhne ke liye kaunsi command use hoti hai?",
-    "opts": [
-      "ls",
-      "cd",
-      "pwd",
-      "mkdir"
-    ],
+    "opts": ["ls", "cd", "pwd", "mkdir"],
     "ans": 2,
     "exp_hi": "pwd ka matlab Print Working Directory hota hai."
   },
@@ -770,12 +515,7 @@
     "type": "mcq",
     "q_en": "Which Linux command is used to create a new directory?",
     "q_hi": "Linux mein naya folder (directory) banane ki command kya hai?",
-    "opts": [
-      "rmdir",
-      "mkdir",
-      "touch",
-      "chmod"
-    ],
+    "opts": ["rmdir", "mkdir", "touch", "chmod"],
     "ans": 1,
     "exp_hi": "mkdir (Make Directory) se naya folder banta hai."
   },
@@ -785,12 +525,7 @@
     "type": "mcq",
     "q_en": "Which shortcut permanently deletes a file without sending it to Recycle Bin in Windows?",
     "q_hi": "Windows mein file ko Recycle Bin mein bheje bina permanently delete karne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + Delete",
-      "Alt + Delete",
-      "Shift + Delete",
-      "Esc + Delete"
-    ],
+    "opts": ["Ctrl + Delete", "Alt + Delete", "Shift + Delete", "Esc + Delete"],
     "ans": 2,
     "exp_hi": "Shift + Delete se file permanently delete hoti hai."
   },
@@ -800,12 +535,7 @@
     "type": "mcq",
     "q_en": "Who created the Linux operating system kernel?",
     "q_hi": "Linux operating system kernel kisne banaya?",
-    "opts": [
-      "Bill Gates",
-      "Linus Torvalds",
-      "Dennis Ritchie",
-      "Ken Thompson"
-    ],
+    "opts": ["Bill Gates", "Linus Torvalds", "Dennis Ritchie", "Ken Thompson"],
     "ans": 1,
     "exp_hi": "Linus Torvalds ne 1991 mein Linux kernel develop kiya."
   },
@@ -815,12 +545,7 @@
     "type": "mcq",
     "q_en": "Which is the default web browser in Ubuntu Linux?",
     "q_hi": "Ubuntu Linux mein default web browser kaunsa hota hai?",
-    "opts": [
-      "Google Chrome",
-      "Mozilla Firefox",
-      "Microsoft Edge",
-      "Safari"
-    ],
+    "opts": ["Google Chrome", "Mozilla Firefox", "Microsoft Edge", "Safari"],
     "ans": 1,
     "exp_hi": "Ubuntu mein Mozilla Firefox default web browser hota hai."
   },
@@ -830,12 +555,7 @@
     "type": "mcq",
     "q_en": "Which electronic component was used in Third Generation computers?",
     "q_hi": "Teesri peedhi (3rd Generation) ke computers mein kya use kiya gaya tha?",
-    "opts": [
-      "Vacuum Tubes",
-      "Transistors",
-      "Integrated Circuits (IC)",
-      "Microprocessors"
-    ],
+    "opts": ["Vacuum Tubes", "Transistors", "Integrated Circuits (IC)", "Microprocessors"],
     "ans": 2,
     "exp_hi": "3rd Generation mein Integrated Circuits (IC) ka istemal hua tha."
   },
@@ -845,12 +565,7 @@
     "type": "mcq",
     "q_en": "How many bits make 1 Nibble?",
     "q_hi": "1 Nibble mein kitne bits hote hain?",
-    "opts": [
-      "2 bits",
-      "4 bits",
-      "8 bits",
-      "16 bits"
-    ],
+    "opts": ["2 bits", "4 bits", "8 bits", "16 bits"],
     "ans": 1,
     "exp_hi": "4 Bits = 1 Nibble aur 8 Bits = 1 Byte hota hai."
   },
@@ -860,12 +575,7 @@
     "type": "mcq",
     "q_en": "Which of the following is a volatile memory?",
     "q_hi": "Nimnlikhit mein se kaunsi ek volatile (asthayi) memory hai?",
-    "opts": [
-      "ROM",
-      "Hard Disk",
-      "RAM",
-      "Pen Drive"
-    ],
+    "opts": ["ROM", "Hard Disk", "RAM", "Pen Drive"],
     "ans": 2,
     "exp_hi": "RAM (Random Access Memory) ek volatile memory hai; power off hone par data mit jata hai."
   },
@@ -875,12 +585,7 @@
     "type": "mcq",
     "q_en": "Which device is used by banks to read special magnetic ink characters on cheques?",
     "q_hi": "Banks dwara cheque par chhape magnetic ink characters padhne ke liye kya use hota hai?",
-    "opts": [
-      "OCR",
-      "OMR",
-      "MICR",
-      "BCR"
-    ],
+    "opts": ["OCR", "OMR", "MICR", "BCR"],
     "ans": 2,
     "exp_hi": "MICR (Magnetic Ink Character Recognition) banking cheques process karne mein use hota hai."
   },
@@ -890,12 +595,7 @@
     "type": "mcq",
     "q_en": "Who is known as the Father of Computer?",
     "q_hi": "Computer ka janak (Father of Computer) kise kaha jata hai?",
-    "opts": [
-      "Charles Babbage",
-      "Alan Turing",
-      "John Von Neumann",
-      "Blaise Pascal"
-    ],
+    "opts": ["Charles Babbage", "Alan Turing", "John Von Neumann", "Blaise Pascal"],
     "ans": 0,
     "exp_hi": "Charles Babbage ko Father of Computer kaha jata hai."
   },
@@ -905,12 +605,7 @@
     "type": "mcq",
     "q_en": "Who coined the term 'Internet of Things' (IoT)?",
     "q_hi": "'Internet of Things' (IoT) shabd kisne diya tha?",
-    "opts": [
-      "Tim Berners-Lee",
-      "Kevin Ashton",
-      "John McCarthy",
-      "Linus Torvalds"
-    ],
+    "opts": ["Tim Berners-Lee", "Kevin Ashton", "John McCarthy", "Linus Torvalds"],
     "ans": 1,
     "exp_hi": "Kevin Ashton ne 1999 mein 'Internet of Things' (IoT) term coined kiya tha."
   },
@@ -920,12 +615,7 @@
     "type": "mcq",
     "q_en": "What type of cyber attack encrypts victim files and demands money to unlock them?",
     "q_hi": "Kaunsa cyber attack files ko encrypt karke unlock karne ke liye paise mangta hai?",
-    "opts": [
-      "Phishing",
-      "Ransomware",
-      "Spyware",
-      "Adware"
-    ],
+    "opts": ["Phishing", "Ransomware", "Spyware", "Adware"],
     "ans": 1,
     "exp_hi": "Ransomware files ko lock/encrypt karke firoti (ransom) mangta hai."
   },
@@ -935,12 +625,7 @@
     "type": "mcq",
     "q_en": "Who is known as the Father of Artificial Intelligence (AI)?",
     "q_hi": "Artificial Intelligence (AI) ka janak kise kaha jata hai?",
-    "opts": [
-      "John McCarthy",
-      "Kevin Ashton",
-      "Elon Musk",
-      "Mark Zuckerberg"
-    ],
+    "opts": ["John McCarthy", "Kevin Ashton", "Elon Musk", "Mark Zuckerberg"],
     "ans": 0,
     "exp_hi": "John McCarthy ne 1956 mein Artificial Intelligence shabd diya tha."
   },
@@ -950,12 +635,7 @@
     "type": "mcq",
     "q_en": "What is the full form of RPA?",
     "q_hi": "RPA ka full form kya hota hai?",
-    "opts": [
-      "Robotic Process Automation",
-      "Remote Process Access",
-      "Rapid Program Application",
-      "Robotic Program Analysis"
-    ],
+    "opts": ["Robotic Process Automation", "Remote Process Access", "Rapid Program Application", "Robotic Program Analysis"],
     "ans": 0,
     "exp_hi": "RPA = Robotic Process Automation."
   },
@@ -965,12 +645,7 @@
     "type": "mcq",
     "q_en": "Which security system monitors and filters incoming and outgoing network traffic?",
     "q_hi": "Kaunsa security system network traffic ko monitor aur filter karta hai?",
-    "opts": [
-      "Compiler",
-      "Firewall",
-      "Defragmenter",
-      "Assembler"
-    ],
+    "opts": ["Compiler", "Firewall", "Defragmenter", "Assembler"],
     "ans": 1,
     "exp_hi": "Firewall unauthorized access rokne ke liye network traffic filter karta hai."
   },
@@ -980,10 +655,7 @@
     "type": "tf",
     "q_en": "Linux is a proprietary closed-source operating system.",
     "q_hi": "Linux ek proprietary closed-source operating system hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 1,
     "exp_hi": "False: Linux ek free aur open-source operating system kernel hai."
   },
@@ -993,10 +665,7 @@
     "type": "tf",
     "q_en": "In LibreOffice Writer, you can directly export a document as a PDF without third-party software.",
     "q_hi": "LibreOffice Writer mein aap bina kisi third-party software ke document ko direct PDF mein export kar sakte hain.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 0,
     "exp_hi": "True: File > Export As > Export as PDF option built-in hota hai."
   },
@@ -1006,10 +675,7 @@
     "type": "tf",
     "q_en": "NEFT transactions can now be performed 24x7 throughout the year in India.",
     "q_hi": "Bharat mein ab NEFT transactions saal bhar 24x7 kiye ja sakte hain.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 0,
     "exp_hi": "True: RBI ne December 2019 se NEFT ko 24x7x365 kar diya hai."
   },
@@ -1019,10 +685,7 @@
     "type": "tf",
     "q_en": "A MAC address is a 32-bit logical address assigned by an ISP.",
     "q_hi": "MAC address ISP dwara diya gaya ek 32-bit logical address hota hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 1,
     "exp_hi": "False: MAC address 48-bit ka permanent physical hardware address hota hai."
   },
@@ -1032,10 +695,7 @@
     "type": "tf",
     "q_en": "Pressing F5 in LibreOffice Impress starts the slideshow from the first slide.",
     "q_hi": "LibreOffice Impress mein F5 dabane se slideshow pehli slide se shuru hota hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 0,
     "exp_hi": "True: F5 se 1st slide se aur Shift+F5 se current slide se slideshow start hota hai."
   },
@@ -1045,10 +705,7 @@
     "type": "tf",
     "q_en": "Plotter is an input device used to scan large architectural maps.",
     "q_hi": "Plotter ek input device hai jiska upyog bade nakshon ko scan karne ke liye hota hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 1,
     "exp_hi": "False: Plotter ek Output device hai jo vector graphics print karta hai."
   },
@@ -1058,10 +715,7 @@
     "type": "tf",
     "q_en": "In LibreOffice Calc, Ctrl + Enter inserts a new line inside the same cell.",
     "q_hi": "LibreOffice Calc mein Ctrl + Enter dabane se ek hi cell ke andar nayi line aati hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 0,
     "exp_hi": "True: Calc cell ke andar line break ke liye Ctrl + Enter use hota hai."
   },
@@ -1071,10 +725,7 @@
     "type": "tf",
     "q_en": "An email address can contain multiple '@' symbols and blank spaces.",
     "q_hi": "Ek email address mein ek se adhik '@' symbol aur blank spaces ho sakte hain.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 1,
     "exp_hi": "False: Email address mein sirf ek '@' symbol hota hai aur space allowed nahi hota."
   },
@@ -1084,10 +735,7 @@
     "type": "tf",
     "q_en": "UPI transactions require sharing your bank account number and IFSC code every time.",
     "q_hi": "UPI transaction karne ke liye har baar bank account number aur IFSC code dalna zaroori hai.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 1,
     "exp_hi": "False: UPI mein sirf UPI ID (VPA) ya QR code se turant payment ho jata hai."
   },
@@ -1097,10 +745,7 @@
     "type": "tf",
     "q_en": "OTP (One-Time Password) should never be shared with anyone over phone or SMS.",
     "q_hi": "OTP (One-Time Password) kisi ke saath phone ya SMS par share nahi karna chahiye.",
-    "opts": [
-      "True (सही)",
-      "False (गलत)"
-    ],
+    "opts": ["True (सही)", "False (गलत)"],
     "ans": 0,
     "exp_hi": "True: OTP confidential hota hai aur account security ke liye hota hai."
   },
@@ -1110,12 +755,7 @@
     "type": "mcq",
     "q_en": "1 Kilobyte (KB) is equal to how many bytes?",
     "q_hi": "1 Kilobyte (KB) kitne bytes ke barabar hota hai?",
-    "opts": [
-      "1000 Bytes",
-      "1024 Bytes",
-      "512 Bytes",
-      "2048 Bytes"
-    ],
+    "opts": ["1000 Bytes", "1024 Bytes", "512 Bytes", "2048 Bytes"],
     "ans": 1,
     "exp_hi": "1 KB = 1024 Bytes (2^10 Bytes)."
   },
@@ -1125,12 +765,7 @@
     "type": "mcq",
     "q_en": "Which memory is permanently written during manufacturing and cannot be erased?",
     "q_hi": "Kaunsi memory manufacturing ke samay likhi jati hai aur mitayi nahi ja sakti?",
-    "opts": [
-      "RAM",
-      "PROM",
-      "MROM",
-      "Cache"
-    ],
+    "opts": ["RAM", "PROM", "MROM", "Cache"],
     "ans": 2,
     "exp_hi": "MROM (Masked ROM) hard-wired hoti hai."
   },
@@ -1140,12 +775,7 @@
     "type": "mcq",
     "q_en": "Which of the following is an impact printer?",
     "q_hi": "Nimnlikhit mein se kaunsa ek Impact Printer hai?",
-    "opts": [
-      "Laser Printer",
-      "Inkjet Printer",
-      "Dot Matrix Printer",
-      "Thermal Printer"
-    ],
+    "opts": ["Laser Printer", "Inkjet Printer", "Dot Matrix Printer", "Thermal Printer"],
     "ans": 2,
     "exp_hi": "Dot Matrix Printer ek Impact Printer hai."
   },
@@ -1155,12 +785,7 @@
     "type": "mcq",
     "q_en": "What is the full form of ALU?",
     "q_hi": "ALU ka poora naam kya hai?",
-    "opts": [
-      "Arithmetic Logic Unit",
-      "Application Logic Unit",
-      "Array Logic Unit",
-      "Arithmetic Local Unit"
-    ],
+    "opts": ["Arithmetic Logic Unit", "Application Logic Unit", "Array Logic Unit", "Arithmetic Local Unit"],
     "ans": 0,
     "exp_hi": "ALU = Arithmetic Logic Unit (CPU ka hissa)."
   },
@@ -1170,12 +795,7 @@
     "type": "mcq",
     "q_en": "Which key is used to refresh the active window or webpage?",
     "q_hi": "Active window ya webpage ko refresh karne ke liye kaunsi function key dabate hain?",
-    "opts": [
-      "F1",
-      "F2",
-      "F5",
-      "F11"
-    ],
+    "opts": ["F1", "F2", "F5", "F11"],
     "ans": 2,
     "exp_hi": "F5 key se window/browser refresh hota hai."
   },
@@ -1185,12 +805,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens Windows Task Manager directly?",
     "q_hi": "Windows Task Manager ko seedhe kholne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + Alt + T",
-      "Ctrl + Shift + Esc",
-      "Alt + F4",
-      "Win + E"
-    ],
+    "opts": ["Ctrl + Alt + T", "Ctrl + Shift + Esc", "Alt + F4", "Win + E"],
     "ans": 1,
     "exp_hi": "Ctrl + Shift + Esc se Task Manager open hota hai."
   },
@@ -1200,12 +815,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens File Explorer in Windows?",
     "q_hi": "Windows mein File Explorer kholne ki shortcut key kya hai?",
-    "opts": [
-      "Win + E",
-      "Win + R",
-      "Win + D",
-      "Win + L"
-    ],
+    "opts": ["Win + E", "Win + R", "Win + D", "Win + L"],
     "ans": 0,
     "exp_hi": "Win + E se File Explorer khulta hai, Win + D se Desktop dikhta hai."
   },
@@ -1215,12 +825,7 @@
     "type": "mcq",
     "q_en": "Which Linux command is used to change file permissions?",
     "q_hi": "Linux mein file permissions badalne ke liye kaunsi command use hoti hai?",
-    "opts": [
-      "chown",
-      "chmod",
-      "chgrp",
-      "ls -l"
-    ],
+    "opts": ["chown", "chmod", "chgrp", "ls -l"],
     "ans": 1,
     "exp_hi": "chmod (Change Mode) se file permissions badli jati hain."
   },
@@ -1230,12 +835,7 @@
     "type": "mcq",
     "q_en": "What is the full form of GUI?",
     "q_hi": "GUI ka poora naam kya hai?",
-    "opts": [
-      "Graphical User Interface",
-      "General User Interaction",
-      "Graphical Utility Interface",
-      "Global User Interface"
-    ],
+    "opts": ["Graphical User Interface", "General User Interaction", "Graphical Utility Interface", "Global User Interface"],
     "ans": 0,
     "exp_hi": "GUI = Graphical User Interface."
   },
@@ -1245,12 +845,7 @@
     "type": "mcq",
     "q_en": "Which shortcut locks the Windows computer screen?",
     "q_hi": "Windows computer screen ko lock karne ki shortcut key kya hai?",
-    "opts": [
-      "Win + K",
-      "Win + L",
-      "Win + X",
-      "Ctrl + L"
-    ],
+    "opts": ["Win + K", "Win + L", "Win + X", "Ctrl + L"],
     "ans": 1,
     "exp_hi": "Windows Key + L dabane se screen lock ho jati hai."
   },
@@ -1260,12 +855,7 @@
     "type": "mcq",
     "q_en": "What is the shortcut key for Subscript in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Subscript ke liye kaunsi shortcut key use hoti hai?",
-    "opts": [
-      "Ctrl + =",
-      "Ctrl + Shift + B",
-      "Ctrl + Shift + P",
-      "Alt + B"
-    ],
+    "opts": ["Ctrl + =", "Ctrl + Shift + B", "Ctrl + Shift + P", "Alt + B"],
     "ans": 1,
     "exp_hi": "LibreOffice Writer mein Subscript ke liye Ctrl + Shift + B use hota hai."
   },
@@ -1275,12 +865,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens the Navigator panel in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Navigator kholne ki shortcut key kya hai?",
-    "opts": [
-      "F5",
-      "F7",
-      "F11",
-      "Ctrl + F5"
-    ],
+    "opts": ["F5", "F7", "F11", "Ctrl + F5"],
     "ans": 0,
     "exp_hi": "F5 dabane se Writer mein Navigator panel khulta hai."
   },
@@ -1290,12 +875,7 @@
     "type": "mcq",
     "q_en": "Which shortcut opens Styles and Formatting sidebar in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Styles sidebar kholne ki shortcut key kya hai?",
-    "opts": [
-      "F7",
-      "F11",
-      "F12",
-      "Ctrl + S"
-    ],
+    "opts": ["F7", "F11", "F12", "Ctrl + S"],
     "ans": 1,
     "exp_hi": "F11 key se Styles sidebar open hota hai."
   },
@@ -1305,12 +885,7 @@
     "type": "mcq",
     "q_en": "What is the shortcut for Print Preview in LibreOffice Writer?",
     "q_hi": "LibreOffice Writer mein Print Preview ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + P",
-      "Ctrl + Shift + O",
-      "Ctrl + F2",
-      "Alt + P"
-    ],
+    "opts": ["Ctrl + P", "Ctrl + Shift + O", "Ctrl + F2", "Alt + P"],
     "ans": 1,
     "exp_hi": "LibreOffice mein Print Preview ki shortcut Ctrl + Shift + O hoti hai."
   },
@@ -1320,12 +895,7 @@
     "type": "mcq",
     "q_en": "Which shortcut inserts the current time in a LibreOffice Calc cell?",
     "q_hi": "LibreOffice Calc cell mein current time insert karne ki shortcut key kya hai?",
-    "opts": [
-      "Ctrl + ;",
-      "Ctrl + Shift + ;",
-      "Alt + T",
-      "Ctrl + T"
-    ],
+    "opts": ["Ctrl + ;", "Ctrl + Shift + ;", "Alt + T", "Ctrl + T"],
     "ans": 1,
     "exp_hi": "Ctrl + Shift + ; se current time insert hota hai."
   },
@@ -1335,12 +905,7 @@
     "type": "mcq",
     "q_en": "What will be the output of =QUOTIENT(15, 4) in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein =QUOTIENT(15, 4) ka output kya hoga?",
-    "opts": [
-      "3",
-      "3.75",
-      "4",
-      "1"
-    ],
+    "opts": ["3", "3.75", "4", "1"],
     "ans": 0,
     "exp_hi": "QUOTIENT function sirf integer bhagphal (3) return karta hai."
   },
@@ -1350,12 +915,7 @@
     "type": "mcq",
     "q_en": "Which symbol is used to make a cell reference absolute in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein cell reference ko absolute banane ke liye kaunsa symbol use hota hai?",
-    "opts": [
-      "%",
-      "$",
-      "&",
-      "#"
-    ],
+    "opts": ["%", "$", "&", "#"],
     "ans": 1,
     "exp_hi": "$ symbol (jaise $A$1) absolute cell referencing ke liye use hota hai."
   },
@@ -1365,12 +925,7 @@
     "type": "mcq",
     "q_en": "What is the minimum zoom percentage in LibreOffice Calc?",
     "q_hi": "LibreOffice Calc mein minimum zoom percentage kitna hota hai?",
-    "opts": [
-      "10%",
-      "20%",
-      "25%",
-      "50%"
-    ],
+    "opts": ["10%", "20%", "25%", "50%"],
     "ans": 1,
     "exp_hi": "Calc mein minimum zoom 20% aur maximum zoom 400% hota hai."
   },
@@ -1380,12 +935,7 @@
     "type": "mcq",
     "q_en": "What is the minimum zoom percentage in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein minimum zoom percentage kitna hota hai?",
-    "opts": [
-      "5%",
-      "10%",
-      "20%",
-      "25%"
-    ],
+    "opts": ["5%", "10%", "20%", "25%"],
     "ans": 0,
     "exp_hi": "Impress mein minimum zoom 5% aur maximum zoom 3000% hota hai."
   },
@@ -1395,12 +945,7 @@
     "type": "mcq",
     "q_en": "Which view displays miniature thumbnails of all slides in LibreOffice Impress?",
     "q_hi": "LibreOffice Impress mein kaunsa view sabhi slides ke chhote thumbnails ek saath dikhata hai?",
-    "opts": [
-      "Normal View",
-      "Outline View",
-      "Slide Sorter View",
-      "Notes View"
-    ],
+    "opts": ["Normal View", "Outline View", "Slide Sorter View", "Notes View"],
     "ans": 2,
     "exp_hi": "Slide Sorter View sabhi slides ko grid thumbnails ke roop mein dikhata hai."
   },
@@ -1410,12 +955,7 @@
     "type": "mcq",
     "q_en": "What is the bit length of a MAC address?",
     "q_hi": "MAC address kitne bits ka hota hai?",
-    "opts": [
-      "32 bits",
-      "48 bits",
-      "64 bits",
-      "128 bits"
-    ],
+    "opts": ["32 bits", "48 bits", "64 bits", "128 bits"],
     "ans": 1,
     "exp_hi": "MAC (Media Access Control) address 48 bits (6 bytes) ka hota hai."
   },
@@ -1425,12 +965,7 @@
     "type": "mcq",
     "q_en": "Which protocol is used for transferring files between client and server?",
     "q_hi": "Client aur server ke beech files transfer karne ke liye kaunsa protocol use hota hai?",
-    "opts": [
-      "SMTP",
-      "FTP",
-      "SNMP",
-      "ARP"
-    ],
+    "opts": ["SMTP", "FTP", "SNMP", "ARP"],
     "ans": 1,
     "exp_hi": "FTP (File Transfer Protocol - Port 21) file transfer ke liye use hota hai."
   },
@@ -1440,12 +975,7 @@
     "type": "mcq",
     "q_en": "What is the full form of DNS?",
     "q_hi": "DNS ka full form kya hota hai?",
-    "opts": [
-      "Domain Name System",
-      "Digital Network Service",
-      "Domain Number Server",
-      "Dynamic Name System"
-    ],
+    "opts": ["Domain Name System", "Digital Network Service", "Domain Number Server", "Dynamic Name System"],
     "ans": 0,
     "exp_hi": "DNS = Domain Name System (jo domain names ko IP addresses mein badalta hai)."
   },
@@ -1455,12 +985,7 @@
     "type": "mcq",
     "q_en": "Which device connects two different networks using different protocols?",
     "q_hi": "Do alag-alag protocols wale networks ko jodne ke liye kaunsa device use hota hai?",
-    "opts": [
-      "Repeater",
-      "Hub",
-      "Gateway",
-      "Switch"
-    ],
+    "opts": ["Repeater", "Hub", "Gateway", "Switch"],
     "ans": 2,
     "exp_hi": "Gateway dissimilar networks ko connect karta hai."
   },
@@ -1470,88 +995,8 @@
     "type": "mcq",
     "q_en": "What is the full form of IRCTC?",
     "q_hi": "IRCTC ka poora naam kya hai?",
-    "opts": [
-      "Indian Railway Catering and Tourism Corporation",
-      "Indian Rail Transport and Catering Company",
-      "Indian Railway Central Tourism Corporation",
-      "International Railway Catering Corporation"
-    ],
+    "opts": ["Indian Railway Catering and Tourism Corporation", "Indian Rail Transport and Catering Company", "Indian Railway Central Tourism Corporation", "International Railway Catering Corporation"],
     "ans": 0,
     "exp_hi": "IRCTC = Indian Railway Catering and Tourism Corporation."
-  },
-  {
-    "id": 101,
-    "ch": 7,
-    "type": "mcq",
-    "q_en": "Which service allows you to book train tickets online in India?",
-    "q_hi": "Bharat mein online train ticket book karne ke liye kaunsi official service hai?",
-    "opts": [
-      "DigiLocker",
-      "IRCTC",
-      "BHIM",
-      "SWAYAM"
-    ],
-    "ans": 1,
-    "exp_hi": "IRCTC online railway ticket booking platform hai."
-  },
-  {
-    "id": 102,
-    "ch": 8,
-    "type": "mcq",
-    "q_en": "What is the full form of BHIM app?",
-    "q_hi": "BHIM app ka full form kya hai?",
-    "opts": [
-      "Bharat Interface for Money",
-      "Bharat Instant Money",
-      "Banking Interface for Mobile",
-      "Bharat Integrated Money"
-    ],
-    "ans": 0,
-    "exp_hi": "BHIM = Bharat Interface for Money."
-  },
-  {
-    "id": 103,
-    "ch": 8,
-    "type": "mcq",
-    "q_en": "What is the full form of OTP?",
-    "q_hi": "OTP ka poora naam kya hai?",
-    "opts": [
-      "One-Time Password",
-      "Only Time Password",
-      "One-Time Pin",
-      "Online Transaction Password"
-    ],
-    "ans": 0,
-    "exp_hi": "OTP = One-Time Password."
-  },
-  {
-    "id": 104,
-    "ch": 9,
-    "type": "mcq",
-    "q_en": "Which cloud computing model provides virtualized hardware resources like servers and storage?",
-    "q_hi": "Kaunsa cloud model servers aur storage jaise virtual hardware resources pradan karta hai?",
-    "opts": [
-      "SaaS",
-      "PaaS",
-      "IaaS",
-      "DaaS"
-    ],
-    "ans": 2,
-    "exp_hi": "IaaS = Infrastructure as a Service (e.g., AWS EC2)."
-  },
-  {
-    "id": 105,
-    "ch": 9,
-    "type": "mcq",
-    "q_en": "What does 'S' stand for in HTTPS?",
-    "q_hi": "HTTPS mein 'S' ka kya matlab hota hai?",
-    "opts": [
-      "System",
-      "Secure",
-      "Server",
-      "Standard"
-    ],
-    "ans": 1,
-    "exp_hi": "HTTPS = HyperText Transfer Protocol Secure."
   }
 ]
